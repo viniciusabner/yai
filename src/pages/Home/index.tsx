@@ -72,7 +72,7 @@ export function Home() {
       </div>
 
       {/* Search Bar Area */}
-      <div className="px-6 py-2 max-w-2xl mx-auto">
+      {/* <div className="px-6 py-2 max-w-2xl mx-auto">
         <div className="flex items-center gap-2 bg-white dark:bg-gray-800 p-2 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
           <Search className="h-5 w-5 text-gray-400 ml-2" />
           <input
@@ -90,7 +90,7 @@ export function Home() {
             <MapPin className={`h-5 w-5 ${selectedCities.length > 0 ? 'text-green-600' : 'text-gray-400'}`} />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Recrutamento de Profissionais CTA */}
       {isLogged !== true && (
@@ -326,7 +326,7 @@ export function Home() {
                 className="snap-start shrink-0 relative w-64 md:w-full h-32 rounded-2xl overflow-hidden group animate-in fade-in duration-300 delay-75"
               >
                 <div className="absolute inset-0 bg-orange-900/60 z-10 transition-colors group-hover:bg-orange-900/70" />
-                <img src="https://images.unsplash.com/photo-1532288075304-4c4eff15f33a?w=800&q=80" alt="SOS Guincho" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&q=80" alt="SOS Guincho" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute flex items-end gap-2 bottom-3 left-4 z-20 text-white font-bold truncate pr-4 text-sm w-full">
                   <div className="bg-white/20 backdrop-blur-md p-1.5 rounded-lg text-white">
                     <Truck className="h-5 w-5" />
@@ -345,7 +345,7 @@ export function Home() {
                 className="snap-start shrink-0 relative w-64 md:w-full h-32 rounded-2xl overflow-hidden group animate-in fade-in duration-300 delay-150"
               >
                 <div className="absolute inset-0 bg-rose-900/60 z-10 transition-colors group-hover:bg-rose-900/70" />
-                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80" alt="Terapias" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://i.pinimg.com/1200x/ea/9d/c6/ea9dc662e91c3ac1e8253c6357464e09.jpg" alt="Terapias" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute flex items-end gap-2 bottom-3 left-4 z-20 text-white font-bold truncate pr-4 text-sm w-full">
                   <div className="bg-white/20 backdrop-blur-md p-1.5 rounded-lg text-white">
                     <Heart className="h-5 w-5" />
@@ -374,7 +374,7 @@ export function Home() {
                 className="snap-start shrink-0 relative w-64 md:w-full h-32 rounded-2xl overflow-hidden group animate-in fade-in duration-300 delay-75"
               >
                 <div className="absolute inset-0 bg-cyan-900/60 z-10 transition-colors group-hover:bg-cyan-900/70" />
-                <img src="https://images.unsplash.com/photo-1584515933487-779d40e1322b?w=800&q=80" alt="Clínicas" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://picsum.photos/seed/doctor/800/800" alt="Clínicas" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute flex items-end gap-2 bottom-3 left-4 z-20 text-white font-bold truncate pr-4 text-sm w-full">
                   <div className="bg-white/20 backdrop-blur-md p-1.5 rounded-lg text-white">
                     <Stethoscope className="h-5 w-5" />
@@ -407,7 +407,7 @@ export function Home() {
                 className="snap-start shrink-0 relative w-64 md:w-full h-32 rounded-2xl overflow-hidden group animate-in fade-in duration-300"
               >
                 <div className="absolute inset-0 bg-blue-900/60 z-10 transition-colors group-hover:bg-blue-900/70" />
-                <img src="https://images.unsplash.com/photo-1628009368231-7bb7cbcb8127?w=800&q=80" alt="Veterinários" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://i.pinimg.com/736x/e4/c2/28/e4c228b1a60e107ecbf1d54419adb990.jpg" alt="Veterinários" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute flex items-end gap-2 bottom-3 left-4 z-20 text-white font-bold truncate pr-4 text-sm w-full">
                   <div className="bg-white/20 backdrop-blur-md p-1.5 rounded-lg text-white">
                     <Stethoscope className="h-5 w-5" />
@@ -422,7 +422,7 @@ export function Home() {
                 className="snap-start shrink-0 relative w-64 md:w-full h-32 rounded-2xl overflow-hidden group animate-in fade-in duration-300 delay-75"
               >
                 <div className="absolute inset-0 bg-teal-900/60 z-10 transition-colors group-hover:bg-teal-900/70" />
-                <img src="https://images.unsplash.com/photo-1587300003388-59208cb962cd?w=800&q=80" alt="Hotel e Creche" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://i.pinimg.com/736x/7a/ba/84/7aba84ae7f2e7f231ec001acbbe99944.jpg" alt="Hotel e Creche" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute flex items-end gap-2 bottom-3 left-4 z-20 text-white font-bold truncate pr-4 text-sm w-full">
                   <div className="bg-white/20 backdrop-blur-md p-1.5 rounded-lg text-white">
                     <Dog className="h-5 w-5" />
@@ -494,7 +494,7 @@ export function Home() {
                 className="snap-start shrink-0 relative w-64 md:w-full h-32 rounded-2xl overflow-hidden group animate-in fade-in duration-300"
               >
                 <div className="absolute inset-0 bg-indigo-900/60 z-10 transition-colors group-hover:bg-indigo-900/70" />
-                <img src="https://images.unsplash.com/photo-1530103043960-ef38714abb15?w=800&q=80" alt="Decoração" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://i.pinimg.com/736x/70/20/15/702015d618cea11bf5014aae820ef4e6.jpg" alt="Decoração" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute flex items-end gap-2 bottom-3 left-4 z-20 text-white font-bold truncate pr-4 text-sm w-full">
                   <div className="bg-white/20 backdrop-blur-md p-1.5 rounded-lg text-white">
                     <PartyPopper className="h-5 w-5" />
@@ -513,7 +513,7 @@ export function Home() {
                 className="snap-start shrink-0 relative w-64 md:w-full h-32 rounded-2xl overflow-hidden group animate-in fade-in duration-300"
               >
                 <div className="absolute inset-0 bg-yellow-900/60 z-10 transition-colors group-hover:bg-yellow-900/70" />
-                <img src="https://images.unsplash.com/photo-1509391366360-fe5bb65858ea?w=800&q=80" alt="Energia Solar" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://i.pinimg.com/736x/4e/1c/c7/4e1cc7391bcdb10ac0dc7bc8c4d0aefe.jpg" alt="Energia Solar" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute flex items-end gap-2 bottom-3 left-4 z-20 text-white font-bold truncate pr-4 text-sm w-full">
                   <div className="bg-white/20 backdrop-blur-md p-1.5 rounded-lg text-white">
                     <Sun className="h-5 w-5" />
@@ -528,7 +528,7 @@ export function Home() {
                 className="snap-start shrink-0 relative w-64 md:w-full h-32 rounded-2xl overflow-hidden group animate-in fade-in duration-300 delay-75"
               >
                 <div className="absolute inset-0 bg-emerald-900/60 z-10 transition-colors group-hover:bg-emerald-900/70" />
-                <img src="https://images.unsplash.com/photo-1485965120184-e220f15ef923?w=800&q=80" alt="Bicicletas" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="https://i.pinimg.com/736x/95/f7/48/95f748d35e2b8c5cb2f4fa83cc261367.jpg" alt="Bicicletas" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute flex items-end gap-2 bottom-3 left-4 z-20 text-white font-bold truncate pr-4 text-sm w-full">
                   <div className="bg-white/20 backdrop-blur-md p-1.5 rounded-lg text-white">
                     <Bike className="h-5 w-5" />
