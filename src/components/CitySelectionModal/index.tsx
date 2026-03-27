@@ -21,9 +21,9 @@ export function CitySelectionModal() {
           <div>
             <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
               <MapPin className="h-5 w-5 text-blue-600" />
-              Onde você está?
+              Onde quer procurar?
             </h2>
-            <p className="text-sm text-gray-500 mt-1">Selecione uma ou mais cidades para ver as ofertas</p>
+            <p className="text-sm text-gray-500 mt-1">Selecione uma ou mais cidades</p>
           </div>
           <button
             onClick={closeCityModal}
