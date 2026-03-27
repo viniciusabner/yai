@@ -1,0 +1,12 @@
+-- 27. Insert Handyman (Marido de Aluguel) Providers (São Bernardo do Campo)
+
+INSERT INTO public.providers (id, name, city_id, neighborhood, address, whatsapp, phone, email, source, active, slug, category, website, creci)
+VALUES
+  (gen_random_uuid(), 'Guima Service', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'São Bernardo do Campo', 'São Bernardo do Campo/SP', '11916780108', '11916780108', 'contato@guimaservice.com.br', 'manual_google', true, 'guima-service-sbc', 'marido_aluguel', 'https://www.dfgmaridodealuguel.com.br', null),
+  (gen_random_uuid(), 'Marido de Aluguel ABC', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'São Bernardo do Campo', 'São Bernardo do Campo/SP', '11947446375', '11947446375', 'contato@maridoaluguelabc.com.br', 'manual_google', true, 'marido-de-aluguel-abc-sbc', 'marido_aluguel', 'https://www.maridoaluguelabc.com.br', null),
+  (gen_random_uuid(), 'Marido de Aluguel SBC (Central)', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'São Bernardo do Campo', 'São Bernardo do Campo/SP', '11948931000', null, 'contato@maridodealuguel.adm.br', 'manual_google', true, 'marido-de-aluguel-sbc-central', 'marido_aluguel', 'https://www.maridodealuguel.adm.br', null),
+  (gen_random_uuid(), 'Doutor Resolve', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'São Bernardo do Campo', 'São Bernardo do Campo/SP', null, null, 'contato@doutorresolve.com.br', 'manual_google', true, 'doutor-resolve-sbc', 'marido_aluguel', 'https://www.doutorresolve.com.br', null),
+  (gen_random_uuid(), 'Master House', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'São Bernardo do Campo', 'São Bernardo do Campo/SP', null, null, 'contato@masterhousesolucoes.com.br', 'manual_google', true, 'master-house-sbc', 'marido_aluguel', 'https://www.masterhousesolucoes.com.br', null),
+  (gen_random_uuid(), 'Triider', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'São Bernardo do Campo', 'São Bernardo do Campo/SP', null, null, 'contato@triider.com.br', 'manual_google', true, 'triider-marido-de-aluguel-sbc', 'marido_aluguel', 'https://www.triider.com.br', null),
+  (gen_random_uuid(), 'C.F.S Reparos', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'São Bernardo do Campo', 'São Bernardo do Campo/SP', null, null, 'contato@cfsreparosresidenciais.com.br', 'manual_google', true, 'cfs-reparos-sbc', 'marido_aluguel', 'https://www.cfsreparosresidenciais.com.br', null)
+ON CONFLICT (slug) DO NOTHING;

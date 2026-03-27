@@ -1,0 +1,23 @@
+[
+  {
+    "id": "ad1ad9e2-9249-48dd-8b4c-31f2ce48c583",
+    "name": "Alemao Borracharia Lava Rápido",
+    "type": null,
+    "city_id": "ea516919-22d1-4508-8641-8eb9be709dd8",
+    "category_id": null,
+    "neighborhood": "Parque América",
+    "address": "Rua 16, Casa 06",
+    "whatsapp": "1142254344",
+    "phone": "1142254344",
+    "email": "alemao-borracharia-lava-rapido-ad1ad9@gmail.com",
+    "source": "manual_google",
+    "active": true,
+    "created_at": "2026-01-05T12:00:00.000Z",
+    "slug": "alemao-borracharia-lava-rapido-rio-grande-da-serra-ad1ad9",
+    "category": "estetica-automotiva",
+    "website": null,
+    "city_slug": "rio-grande-da-serra",
+    "state": "SP",
+    "creci": null
+  }
+]

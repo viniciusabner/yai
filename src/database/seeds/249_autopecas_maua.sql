@@ -1,0 +1,91 @@
+-- Seed para Autopeças reais em Mauá, SP
+DELETE FROM public.providers WHERE category = 'autopecas' AND city_id = '6f15b756-1913-4ca0-81ea-5a82f11740a3';
+
+INSERT INTO public.providers (id, name, city_id, neighborhood, address, whatsapp, phone, email, source, active, slug, category, website, city_slug, state)
+VALUES 
+  (
+        'c468ed9c-b1ca-4c18-838c-d78ffb8c28c7', 
+        'AutoZone Mauá', 
+        '6f15b756-1913-4ca0-81ea-5a82f11740a3', 
+        'Jd. Maringá', 
+        'Avenida Barão de Mauá, 3062', 
+        '1154685402', 
+        '1154685402', 
+        'autozone-maua-c468ed@gmail.com', 
+        'manual_google', 
+        true, 
+        'autozone-maua-maua-c468ed', 
+        'autopecas', 
+        NULL, 
+        'maua', 
+        'SP'
+      ),
+  (
+        '5cf5b76a-5a80-4887-927d-3fad5832f683', 
+        'DAPEC Distribuidora de Peças', 
+        '6f15b756-1913-4ca0-81ea-5a82f11740a3', 
+        'Jardim Maringá', 
+        'Av. Barão de Mauá, 3035', 
+        '1150268225', 
+        '1150268225', 
+        'dapec-distribuidora-de-pecas-5cf5b7@gmail.com', 
+        'manual_google', 
+        true, 
+        'dapec-distribuidora-de-pecas-maua-5cf5b7', 
+        'autopecas', 
+        NULL, 
+        'maua', 
+        'SP'
+      ),
+  (
+        'b5633a91-4503-4727-be46-f456e2e6ead4', 
+        'BomPreço Auto Peças', 
+        '6f15b756-1913-4ca0-81ea-5a82f11740a3', 
+        'Jd Itapeva', 
+        'Av. Barão de Mauá, 4818', 
+        '11932908890', 
+        '11932908890', 
+        'bompreco-auto-pecas-b5633a@gmail.com', 
+        'manual_google', 
+        true, 
+        'bompreco-auto-pecas-maua-b5633a', 
+        'autopecas', 
+        NULL, 
+        'maua', 
+        'SP'
+      ),
+  (
+        'c293db30-1816-4b6a-807b-d25cba65226b', 
+        'Atenas Autopeças', 
+        '6f15b756-1913-4ca0-81ea-5a82f11740a3', 
+        'Vila Bocaina', 
+        'Rua Ceci, 25', 
+        '1145431814', 
+        '1145431814', 
+        'atenas-autopecas-c293db@gmail.com', 
+        'manual_google', 
+        true, 
+        'atenas-autopecas-maua-c293db', 
+        'autopecas', 
+        NULL, 
+        'maua', 
+        'SP'
+      ),
+  (
+        '9131965f-76b1-404e-8228-3a9be5f424f6', 
+        'Genuine Distribuidora', 
+        '6f15b756-1913-4ca0-81ea-5a82f11740a3', 
+        'Matriz', 
+        'Rua Presidente Carlos Luz, 181', 
+        '1145556066', 
+        '1145556066', 
+        'genuine-distribuidora-913196@gmail.com', 
+        'manual_google', 
+        true, 
+        'genuine-distribuidora-maua-913196', 
+        'autopecas', 
+        NULL, 
+        'maua', 
+        'SP'
+      )
+ON CONFLICT (id) DO NOTHING;

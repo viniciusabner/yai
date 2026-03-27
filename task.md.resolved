@@ -1,0 +1,185 @@
+# Tarefas: Yai MVP (Antigo ContateJá)
+
+- [x] **Configuração e Setup do Projeto** <!-- id: 0 -->
+    - [x] Inicializar projeto Vite (React + TS) <!-- id: 1 -->
+    - [x] Instalar dependências (Tailwind, Supabase, Router, Zustand, Lucide) <!-- id: 2 -->
+    - [x] Configurar Tailwind CSS <!-- id: 3 -->
+    - [x] Criar estrutura de pastas <!-- id: 4 -->
+    - [x] **Definir Nova Identidade Visual (Refinamento Vetorial)** <!-- id: 99 -->
+        - [x] Testar V1-V57 (Ajustes de geometria aprovados)
+        - [x] Criar Variações de Cores (Neutro, Dark, Light, Yellow)
+        - [x] Implementar e substituir PNG final
+- [ ] **Expansão de Categorias e Serviços (Reformas e Reparos)** <!-- id: 80 -->
+    - [ ] **Criar Seeds para Novas Categorias** <!-- id: 81 -->
+        - [x] Pedreiro (Construção e Reformas) <!-- id: 82 -->
+        - [x] Marido de Aluguel (Reparos Gerais) <!-- id: 83 -->
+        - [x] Eletricista (Instalação e Manutenção) <!-- id: 84 -->
+        - [x] Encanador (Hidráulica e Caça Vazamentos) <!-- id: 85 -->
+        - [x] Pintor Residencial (Acabamento) <!-- id: 86 -->
+        - [x] Montador de Móveis (Instalação) <!-- id: 87 -->
+        - [x] Gesseiro / Drywall (Reformas) <!-- id: 88 -->
+        - [x] Vidraceiro (Box e Esquadrias) <!-- id: 89 -->
+        - [x] Técnico em Ar Condicionado (Climatização) <!-- id: 90 -->
+        - [x] Serralheiro (Estruturas Metálicas) <!-- id: 91 -->
+        - [x] Jardineiro (Paisagismo e Manutenção) <!-- id: 92 -->
+        - [x] Dedetizadora (Controle de Pragas) <!-- id: 93 -->
+        - [x] Desentupidora (Saneamento) <!-- id: 94 -->
+    - [ ] Atualizar Home Page para destacar novas categorias <!-- id: 95 -->
+
+- [ ] **Expansão de Categorias e Serviços (Automotivos)** <!-- id: 100 -->
+    - [ ] Mapeamento e Criação de Seeds Automotivos <!-- id: 101 -->
+        - [x] Mecânica Geral <!-- id: 102 -->
+        - [x] Auto Elétrica e Baterias <!-- id: 103 -->
+        - [x] Borracharia e Pneus <!-- id: 104 -->
+        - [x] Funilaria e Pintura <!-- id: 105 -->
+        - [x] Autopeças <!-- id: 106 -->
+        - [x] Lava Rápido / Estética Automotiva <!-- id: 107 -->
+        - [x] Guincho 24h <!-- id: 108 -->
+    - [x] Atualizar Home Page com Abas (Filtros Macro: Casa vs Veículo) <!-- id: 109 -->
+
+- [ ] **Expansão Futura de Macro-Segmentos (Em Breve)** <!-- id: 110 -->
+    - [x] Saúde & Bem-Estar (Clínicas, Estética, Terapeutas) <!-- id: 111 -->
+    - [x] Para sua Festa (Buffet, Decoração, Animação) <!-- id: 112 -->
+    - [x] Para seu Pet (Veterinários, Banho & Tosa, Adestradores) <!-- id: 113 -->
+
+- [ ] **Novas Categorias de Serviços a Mapear**
+    - [ ] **1. Ultra-Conveniência e Lar**
+        - [x] Lavanderias Self-Service e de assinatura
+        - [x] Personal Organizer
+        - [x] Limpeza Pós-Obra e Faxina Profissional
+        - [x] Redes de Proteção e Segurança
+        - [x] Automação Residencial
+        - [x] Serviços de Mudança "Chave na Mão"
+    - [ ] **2. Saúde Integral e Longevidade**
+        - [x] Terapia e Psicologia
+        - [x] Personal Trainer 
+        - [x] Nutricionistas
+        - [x] Exames Laboratoriais Domiciliares
+        - [x] Estética Avançada e Harmonização Facial
+        - [x] Fisioterapia e Quiropraxia
+        - [x] Cuidador de Idosos
+        - [x] Yoga e Meditação
+        - [x] Massoterapia 
+        - [x] Odontologia Estética
+    - [ ] **3. Economia "Pet-Centric"**
+        - [x] Banho e Tosa
+        - [x] Dog Walker
+        - [x] Adestramento Comportamental
+        - [x] Creches e Hotéis Pet
+        - [x] Clínicas Veterinárias
+        - [x] Alimentação Natural para Pets
+        - [x] Pet shop e casa de ração
+
+    - [ ] **4. Educação**
+        - [x] Agências de Marketing (Publicidade)
+        - [x] Escolas de Idiomas
+        - [x] Cursos Profissionalizantes
+        - [x] Aulas Particulares
+        - [x] Mentorias de Carreira/Tecnologia
+    - [ ] **5. Festas & Eventos**
+        - [x] Decoração de Festas
+        - [x] Buffet e espaço para festas e eventos
+        - [x] Recreação
+        - [x] Aluguel de Equipamentos para festas
+        - [x] Lanches, salgados e doces para festas
+        - [x] Fotografia e Filmagem
+    - [x] **6. Sustentabilidade e Mobilidade**
+        - [x] Reparo de Bicicletas e Patinetes
+        - [x] Instalação de Energia Solar
+        - [x] Brechós de Luxo/Curadoria
+        - [x] Locação de Carros por Assinatura
+        - [ ] Paisagismo e Hortas
+
+- [x] **Arquitetura Principal** <!-- id: 5 -->
+    - [x] Configurar cliente Supabase (`services/supabase.ts`) <!-- id: 6 -->
+    - [x] Configurar Store Global (`store/useSelectionStore.ts`) <!-- id: 7 -->
+    - [x] Configurar Roteamento ([app/router.tsx](file:///c:/Users/Vida/Documents/yai/src/app/router.tsx)) <!-- id: 8 -->
+- [x] **Componentes de UI** <!-- id: 9 -->
+    - [x] Criar componente `Button` <!-- id: 10 -->
+    - [x] Criar componente `Checkbox` <!-- id: 11 -->
+    - [x] Criar componente `CitySelect` <!-- id: 12 -->
+    - [x] Criar componente [ProviderCard](file:///c:/Users/Vida/Documents/yai/src/components/ProviderCard/index.tsx#26-277) <!-- id: 13 -->
+    - [x] Melhorar layout do ProviderCard (2 linhas)
+    - [x] Ajustar truncamento do nome da empresa (flex-1)
+    - [x] Fixar caixa de mensagem e checkbox no topo (Sticky Header)
+    - [x] Corrigir sobreposição de headers (z-index e offsets)
+    - [x] Ajustar background do Sticky Header para Dark Mode <!-- id: 1615 -->
+    - [x] Criar componente [ProviderList](file:///c:/Users/Vida/Documents/yai/src/components/ProviderList/index.tsx#16-63) <!-- id: 14 -->
+- [x] **Páginas e Funcionalidades** <!-- id: 15 -->
+    - [x] Implementar página [Home](file:///c:/Users/Vida/Documents/yai/src/pages/Home/index.tsx#13-240) <!-- id: 16 -->
+    - [x] Implementar página [Results](file:///c:/Users/Vida/Documents/yai/src/pages/Results/index.tsx#19-338) <!-- id: 17 -->
+    - [x] Implementar gerador de links WhatsApp (`utils/whatsapp.ts`) <!-- id: 18 -->
+- [x] **Integração de Dados** <!-- id: 19 -->
+    - [x] Implementar [services/cities.service.ts](file:///c:/Users/Vida/Documents/yai/src/services/cities.service.ts) <!-- id: 20 -->
+    - [x] Implementar [services/providers.service.ts](file:///c:/Users/Vida/Documents/yai/src/services/providers.service.ts) <!-- id: 21 -->
+    - [x] Adicionar Prestadores Automotivos de Santo André (Seed 08)
+    - [x] Adicionar Prestadores Automotivos de São Bernardo do Campo (Seed 09)
+    - [x] Adicionar Prestadores Automotivos de São Caetano do Sul (Seed 10)
+    - [x] Adicionar Prestadores Automotivos de Mauá (Seed 11)
+    - [x] Adicionar Prestadores Automotivos de Diadema (Seed 12)
+    - [x] Adicionar Prestadores Automotivos de Ribeirão Pires (Seed 13)
+    - [x] Adicionar Cidade e Prestadores de Rio Grande da Serra (Seed 14/15)
+    - [x] Adicionar Imobiliárias de Rio Grande da Serra (Seed 16)
+- [x] **Estilização e Refinamento** <!-- id: 22 -->
+    - [x] Aplicar estilos globais e tokens de design <!-- id: 23 -->
+    - [x] Funcionalidade de Ciclo de Vida do Contato
+      - [x] Criar script SQL para tabela `contact_events`
+      - [x] Implementar hook `useContactHistory` (lógica LocalStorage)
+      - [x] Atualizar [providers.service.ts](file:///c:/Users/Vida/Documents/yai/src/services/providers.service.ts) para registrar eventos
+      - [x] Integrar UI de Ciclo de Vida no [ProviderCard](file:///c:/Users/Vida/Documents/yai/src/components/ProviderCard/index.tsx#26-277)
+      - [x] Verificação da persistência de estado e chamadas de API
+    - [x] Verificar responsividade Mobile-first <!-- id: 24 -->
+- [x] **Melhorias na Home Page** <!-- id: 25 -->
+    - [x] Adicionar Título e Subtítulo <!-- id: 26 -->
+    - [x] Garantir clareza no contexto de "Imobiliárias" (Ajustado para Automotivo) <!-- id: 27 -->
+- [ ] **Fluxo de Contato e Mensagens** <!-- id: 28 -->
+    - [x] **Perfil de Usuário e Coleta de WhatsApp**
+        - [x] Criar migração da tabela `profiles` <!-- id: 34 -->
+        - [x] Criar componente [CompleteProfileModal](file:///c:/Users/Vida/Documents/yai/src/components/CompleteProfileModal/index.tsx#14-376) <!-- id: 35 -->
+        - [x] Integrar Modal no fluxo de Header/Auth <!-- id: 36 -->
+    - [ ] **Melhorias de Login e Segurança** <!-- id: 70 -->
+        - [x] Implementar "Esqueci minha senha" (Reset Password) <!-- id: 71 -->
+        - [x] Adicionar ícone de "olho" (Show/Hide Password) no Login e Cadastro <!-- id: 72 -->
+        - [x] Melhorar validações de formulário (Confirmação de Senha) <!-- id: 73 -->
+        - [ ] Adicionar "Lembrar de mim" (Persist Session) <!-- id: 74 -->
+    - [x] Atualizar Modal de Contato (Opções WhatsApp vs Plataforma) <!-- id: 29 -->
+    - [x] **Sistema de Envio em Massa** <!-- id: 37 -->
+        - [ ] Tornar input de mensagem obrigatório na página de Resultados <!-- id: 38 -->
+        - [ ] Dividir Barra de Ação: Botão WhatsApp vs Botão Chat <!-- id: 39 -->
+        - [x] Backend: Criar tabelas `conversations` e `messages` <!-- id: 40 -->
+        - [ ] Service: Implementar lógica `sendMessageToProviders` <!-- id: 41 -->
+        - [ ] Frontend: Conectar botão "Chat" ao serviço <!-- id: 42 -->
+    - [x] Criar UI da Inbox do Usuário <!-- id: 32 -->
+        - [x] Adicionar Ícone de Inbox no Header
+        - [x] Criar Serviço de Mensageria
+        - [x] Construir Layout Inbox Mobile-First
+        - [x] Implementar Mensagens em Tempo Real
+    - [ ] **Confiabilidade e Melhorias do Chat**
+        - [ ] Implementar Polling de Mensagens (Backup de Conexão)
+        - [ ] Implementar Contador de Não Lidas (Ícone no Topo)
+        - [ ] Implementar Lógica de "Marcar como Lida"
+    - [x] Criar Área do Prestador (Resposta) <!-- id: 33 -->
+        - [x] DB: Adicionar owner_id aos Prestadores
+        - [x] DB: RLS para Acesso do Prestador
+        - [x] UI: Inbox do Prestador (/provider)
+        - [x] Feature: Reivindicar Prestador (Modo Dev)
+- [x] **Perfil da Empresa (Mini-Site)** <!-- id: 50 -->
+    - [x] Tornar nome da empresa clicável na lista <!-- id: 51 -->
+    - [x] Criar Modal de Perfil da Empresa <!-- id: 52 -->
+    - [x] Exibir Informações Básicas (Logo, Descrição, Categoria) <!-- id: 53 -->
+    - [x] Implementar Galeria de Fotos (Antes/Depois) <!-- id: 54 -->
+    - [x] Implementar Horário de Funcionamento <!-- id: 55 -->
+    - [x] Implementar Mapa de Localização <!-- id: 56 -->
+    - [x] Implementar Avaliações (Placeholder/Estrelas) <!-- id: 57 -->
+- [x] **Rodapé (Footer) e Institucional** <!-- id: 58 -->
+    - [x] Criar componente [Footer](file:///c:/Users/Vida/Documents/yai/src/components/Footer/index.tsx#5-95) (Responsivo) <!-- id: 59 -->
+    - [x] Criar páginas/rotas institucionais (Placeholders inicialmente) <!-- id: 60 -->
+    - [x] Implementar Links:
+        - [x] Sobre <!-- id: 61 -->
+        - [x] Ajuda (FAQ) <!-- id: 62 -->
+        - [x] Dicas de segurança <!-- id: 63 -->
+        - [x] Termos de uso <!-- id: 64 -->
+        - [x] Política de privacidade <!-- id: 65 -->
+        - [x] Propriedade intelectual <!-- id: 66 -->
+    - [x] Adicionar Redes Sociais (Instagram, LinkedIn) <!-- id: 67 -->
+    - [x] Adicionar Copyright Dinâmico <!-- id: 68 -->

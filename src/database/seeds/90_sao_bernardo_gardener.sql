@@ -1,0 +1,17 @@
+-- 90. Insert Gardener (Jardineiro) Providers (São Bernardo do Campo)
+
+INSERT INTO public.providers (id, name, city_id, neighborhood, address, whatsapp, phone, email, source, active, slug, category, website, creci)
+VALUES
+  -- Encontrados com dados reais
+  (gen_random_uuid(), 'Âmbar Jardinagem', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'Vila Vivaldi', 'Rua Tibiriça, 835', null, null, null, 'manual_google', true, 'ambar-jardinagem-sao-bernardo', 'jardineiro', 'https://ambarjardinagem.com.br', null),
+  (gen_random_uuid(), 'Flores Verdes Brasil', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'Centro', 'São Bernardo do Campo - SP', '11933959265', null, null, 'manual_google', true, 'flores-verdes-brasil-sao-bernardo', 'jardineiro', null, null),
+  (gen_random_uuid(), 'ABC Garden Winston', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'Rudge Ramos', 'Avenida Winston Churchill, 1158', null, null, null, 'manual_google', true, 'abc-garden-winston-sao-bernardo', 'jardineiro', 'https://abcgarden.com.br', null),
+  (gen_random_uuid(), 'ABC Garden João Ramalho', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'Centro', 'Avenida João Ramalho, 1371', null, null, null, 'manual_google', true, 'abc-garden-joao-ramalho-sao-bernardo', 'jardineiro', 'https://abcgarden.com.br', null),
+  (gen_random_uuid(), 'Dular Jardinagem', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'Centro', 'São Bernardo do Campo - SP', null, null, null, 'manual_google', true, 'dular-jardinagem-sao-bernardo', 'jardineiro', 'https://dularjardinagem.com.br', null),
+  (gen_random_uuid(), 'Espaço Artes Plínio Paisagismo', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'Centro', 'São Bernardo do Campo - SP', null, null, null, 'manual_google', true, 'espaco-artes-plinio-paisagismo-sao-bernardo', 'jardineiro', 'https://pliniopaisagismo.com.br', null),
+  (gen_random_uuid(), 'Native Garden', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'Centro', 'São Bernardo do Campo - SP', null, null, null, 'manual_google', true, 'native-garden-sao-bernardo', 'jardineiro', 'https://nativegarden.com.br', null),
+  (gen_random_uuid(), 'Tudo Verde Paisagismo', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'Centro', 'São Bernardo do Campo - SP', null, null, null, 'manual_google', true, 'tudo-verde-paisagismo-sao-bernardo', 'jardineiro', 'https://proverdepaisagismo.com.br', null),
+  (gen_random_uuid(), 'Master House Jardineiro', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'Centro', 'São Bernardo do Campo - SP', null, null, null, 'manual_google', true, 'master-house-jardineiro-sao-bernardo', 'jardineiro', 'https://masterhousesolucoes.com.br', null),
+  (gen_random_uuid(), 'Ana Lui Paisagismo', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'Centro', 'São Bernardo do Campo - SP', null, null, null, 'manual_google', true, 'ana-lui-paisagismo-sao-bernardo', 'jardineiro', 'https://analuipaisagem.com.br', null),
+  (gen_random_uuid(), 'Grupo Brasanitas', (SELECT id FROM public.cities WHERE slug='sao-bernardo-do-campo'), 'Centro', 'São Bernardo do Campo - SP', null, '1128795922', null, 'manual_google', true, 'grupo-brasanitas-sao-bernardo', 'jardineiro', 'https://grupobrasanitas.com.br', null)
+ON CONFLICT (slug) DO NOTHING;

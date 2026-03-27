@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-gray-900 bg-gray-50 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300;
+  }
+}
+
+/* Custom Utilities if needed */
+.bg-page { background-color: rgb(var(--bg-page)); }
+.bg-card { background-color: rgb(var(--bg-card)); }
+.text-main { color: rgb(var(--text-main)); }
+.text-brand-blue { color: rgb(var(--color-brand-blue)); }
+.text-brand-yellow { color: rgb(var(--color-brand-yellow)); }

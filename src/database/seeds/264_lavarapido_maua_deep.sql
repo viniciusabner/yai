@@ -1,0 +1,91 @@
+-- Seed para Lava Rapido reais em Mauá, SP (Deep Search)
+DELETE FROM public.providers WHERE category IN ('lava-rapido', 'estetica-automotiva') AND city_id = '6f15b756-1913-4ca0-81ea-5a82f11740a3';
+
+INSERT INTO public.providers (id, name, city_id, neighborhood, address, whatsapp, phone, email, source, active, slug, category, website, city_slug, state)
+VALUES 
+  (
+    'ea3df322-deed-4dd8-96c4-c3ee81b59015', 
+    'EFATA Estética Automotiva', 
+    '6f15b756-1913-4ca0-81ea-5a82f11740a3', 
+    'Jd Bom Recanto', 
+    'Rua XV de Novembro, 671', 
+    '11949985905', 
+    '11949985905', 
+    'efata-estetica-automotiva-ea3df3@gmail.com', 
+    'manual_google', 
+    true, 
+    'efata-estetica-automotiva-maua-ea3df3', 
+    'estetica-automotiva', 
+    NULL, 
+    'maua', 
+    'SP'
+  ),
+  (
+    '7fcf4fd6-df99-400d-af25-a7f51adcde8a', 
+    'Centro Car Lava Rapido', 
+    '6f15b756-1913-4ca0-81ea-5a82f11740a3', 
+    'Jardim Mauá', 
+    'R. Jandira Pedro Copine, 25', 
+    '11947254439', 
+    '11947254439', 
+    'centro-car-lava-rapido-7fcf4f@gmail.com', 
+    'manual_google', 
+    true, 
+    'centro-car-lava-rapido-maua-7fcf4f', 
+    'estetica-automotiva', 
+    NULL, 
+    'maua', 
+    'SP'
+  ),
+  (
+    '7584658d-15b8-4e83-8605-e339a20657fd', 
+    'Lava Rápido 2 Irmãos', 
+    '6f15b756-1913-4ca0-81ea-5a82f11740a3', 
+    'Parque São Vicente', 
+    'R. Pedro de Tolêdo, 351', 
+    '11959107760', 
+    '11959107760', 
+    'lava-rapido-2-irmaos-758465@gmail.com', 
+    'manual_google', 
+    true, 
+    'lava-rapido-2-irmaos-maua-758465', 
+    'estetica-automotiva', 
+    NULL, 
+    'maua', 
+    'SP'
+  ),
+  (
+    'd7992e91-e819-48b7-9416-c97d6fded22e', 
+    'Lava Rápido Isadora', 
+    '6f15b756-1913-4ca0-81ea-5a82f11740a3', 
+    'Vila Mercedes', 
+    'Av. José Ricardo Nalle, 312', 
+    '11943675797', 
+    '11943675797', 
+    'lava-rapido-isadora-d7992e@gmail.com', 
+    'manual_google', 
+    true, 
+    'lava-rapido-isadora-maua-d7992e', 
+    'estetica-automotiva', 
+    NULL, 
+    'maua', 
+    'SP'
+  ),
+  (
+    'fb25cc53-d2f8-49b4-90a5-2bff4918ee22', 
+    'Rock Car Lava Rápido', 
+    '6f15b756-1913-4ca0-81ea-5a82f11740a3', 
+    'Vila Bocaina', 
+    'Avenida Portugal, 427', 
+    '1134211310', 
+    '1134211310', 
+    'rock-car-lava-rapido-fb25cc@gmail.com', 
+    'manual_google', 
+    true, 
+    'rock-car-lava-rapido-maua-fb25cc', 
+    'estetica-automotiva', 
+    NULL, 
+    'maua', 
+    'SP'
+  )
+ON CONFLICT (id) DO NOTHING;

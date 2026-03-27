@@ -1,0 +1,23 @@
+[
+  {
+    "id": "8ff2df1e-1b0a-4389-a136-df911dedbfdb",
+    "name": "Funilaria e Pintura Peteleco",
+    "type": null,
+    "city_id": "ea516919-22d1-4508-8641-8eb9be709dd8",
+    "category_id": null,
+    "neighborhood": "Jardim Lavínia",
+    "address": "Rua Prefeito Francisco Arnoni, 4",
+    "whatsapp": "1148201655",
+    "phone": "1148201655",
+    "email": "funilaria-e-pintura-peteleco-8ff2df@gmail.com",
+    "source": "manual_google",
+    "active": true,
+    "created_at": "2026-01-05T12:00:00.000Z",
+    "slug": "funilaria-e-pintura-peteleco-rio-grande-da-serra-8ff2df",
+    "category": "funilaria",
+    "website": null,
+    "city_slug": "rio-grande-da-serra",
+    "state": "SP",
+    "creci": null
+  }
+]

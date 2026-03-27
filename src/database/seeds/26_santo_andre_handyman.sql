@@ -1,0 +1,12 @@
+-- 26. Insert Handyman (Marido de Aluguel) Providers (Santo André)
+
+INSERT INTO public.providers (id, name, city_id, neighborhood, address, whatsapp, phone, email, source, active, slug, category, website, creci)
+VALUES
+  (gen_random_uuid(), 'Marido de Aluguel Santo André', (SELECT id FROM public.cities WHERE slug='santo-andre'), 'Santo André', 'Santo André/SP', '11948931000', '551141144004', 'contato@maridodealuguel.adm.br', 'manual_google', true, 'marido-de-aluguel-santo-andre', 'marido_aluguel', 'https://www.maridodealuguel.adm.br', null),
+  (gen_random_uuid(), 'Guima Service', (SELECT id FROM public.cities WHERE slug='santo-andre'), 'Santo André', 'Santo André/SP', '11916780108', '11916780108', 'contato@guimaservice.com.br', 'manual_google', true, 'guima-service-santo-andre', 'marido_aluguel', 'https://www.dfgmaridodealuguel.com.br', null),
+  (gen_random_uuid(), 'Marido de Aluguel ABC', (SELECT id FROM public.cities WHERE slug='santo-andre'), 'Santo André', 'Santo André/SP', '11947446375', '11947446375', 'contato@maridoaluguelabc.com.br', 'manual_google', true, 'marido-de-aluguel-abc-santo-andre', 'marido_aluguel', 'https://www.maridoaluguelabc.com.br', null),
+  (gen_random_uuid(), 'Alexandre Velasco', (SELECT id FROM public.cities WHERE slug='santo-andre'), 'Parque Erasmo Assunção', 'R. Jorge Beretta, 963', null, null, 'contato@obrasflex.com.br', 'manual_google', true, 'alexandre-velasco-santo-andre', 'marido_aluguel', 'https://www.obrasflex.com.br', null),
+  (gen_random_uuid(), 'Shopping de Serviços', (SELECT id FROM public.cities WHERE slug='santo-andre'), 'Santo André', 'Santo André/SP', '11986154000', '11986154000', 'contato@shoppingdeservicos.com.br', 'manual_google', true, 'shopping-de-servicos-santo-andre', 'marido_aluguel', 'https://www.shoppingdeservicos.com.br', null),
+  (gen_random_uuid(), 'Triider', (SELECT id FROM public.cities WHERE slug='santo-andre'), 'Santo André', 'Santo André/SP', null, null, 'contato@triider.com.br', 'manual_google', true, 'triider-marido-de-aluguel-santo-andre', 'marido_aluguel', 'https://www.triider.com.br', null),
+  (gen_random_uuid(), 'GuiaFix', (SELECT id FROM public.cities WHERE slug='santo-andre'), 'Santo André', 'Santo André/SP', null, null, 'contato@guiafix.com.br', 'manual_google', true, 'guiafix-marido-de-aluguel-santo-andre', 'marido_aluguel', 'https://www.guiafix.com.br', null)
+ON CONFLICT (slug) DO NOTHING;

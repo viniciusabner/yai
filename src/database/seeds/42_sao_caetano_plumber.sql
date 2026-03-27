@@ -1,0 +1,12 @@
+-- 42. Insert Plumbers (Encanador) Providers (São Caetano do Sul)
+
+INSERT INTO public.providers (id, name, city_id, neighborhood, address, whatsapp, phone, email, source, active, slug, category, website, creci)
+VALUES
+  (gen_random_uuid(), 'Hidrotex Encanador', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'São Caetano do Sul', 'São Caetano do Sul/SP', '11948931000', '11948931000', 'contato@servicos24h.srv.br', 'manual_google', true, 'hidrotex-encanador-scs', 'encanador', 'https://www.servicos24h.srv.br', null),
+  (gen_random_uuid(), 'RDG Caça Vazamentos', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'São Caetano do Sul', 'São Caetano do Sul/SP', '11951138397', '11951138397', 'contato@rdgcacavazamento.com.br', 'manual_google', true, 'rdg-caca-vazamentos-scs', 'encanador', 'https://www.rdgcacavazamento.com.br', null),
+  (gen_random_uuid(), 'SOS Prestadora de Serviços', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'São Caetano do Sul', 'São Caetano do Sul/SP', '11997414460', '11997414460', 'contato@sosprestadoradeservicos.com.br', 'manual_google', true, 'sos-prestadora-de-servicos-scs', 'encanador', 'https://www.sosprestadoradeservicos.com.br', null),
+  (gen_random_uuid(), 'S.O.S Lar 24 horas', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'São Caetano do Sul', 'São Caetano do Sul/SP', '11970235088', '11970235088', 'contato@sosatendimento24horas.com', 'manual_google', true, 'sos-lar-24-horas-scs', 'encanador', 'https://www.sosatendimento24horas.com', null),
+  (gen_random_uuid(), 'Guima Service (Marido de Aluguel)', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'São Caetano do Sul', 'São Caetano do Sul/SP', '11916780108', '11916780108', 'contato@dfgmaridodealuguel.com.br', 'manual_google', true, 'guima-service-marido-de-aluguel-scs', 'encanador', 'https://www.dfgmaridodealuguel.com.br', null),
+  (gen_random_uuid(), 'André Encanador', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Nova Gerty', 'Rua Tocantins, 151', '11950507046', '1142313174', 'contato@guiadeassinantes.com.br', 'manual_google', true, 'andre-encanador-scs', 'encanador', 'https://www.guiadeassinantes.com.br', null),
+  (gen_random_uuid(), 'Doutor Resolve', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'São Caetano do Sul', 'São Caetano do Sul/SP', null, null, 'contato@doutorresolve.com.br', 'manual_google', true, 'doutor-resolve-scs-plumber', 'encanador', 'https://www.doutorresolve.com.br', null)
+ON CONFLICT (slug) DO NOTHING;

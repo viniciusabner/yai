@@ -1,0 +1,41 @@
+<svg width="512" height="512" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Navy Bubble -->
+  <path 
+    d="M50 5 C75 5 95 25 95 50 C95 75 75 95 50 95 C41 95 31 92 23 86 L10 93 L18 78 C10 70 5 60 5 50 C5 25 25 5 50 5 Z" 
+    fill="#001F3F" 
+    stroke="white" 
+    stroke-width="5" 
+    stroke-linejoin="round"
+  />
+
+  <!-- Text Group: Shifted Left -->
+  <!-- Translate X: -6 to move left -->
+  <g transform="translate(-6, 0)">
+    <g stroke="#FFD700" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter">
+        <!-- Y -->
+        <path d="M28 36 L37 50 V64" fill="none" />
+        <path d="M46 36 L37 50" fill="none" />
+
+        <!-- a -->
+        <path d="M68 48 V64" />
+        <path d="M68 56 C68 61 64 64 59 64 C54 64 50 61 50 56 C50 51 54 48 59 48 C64 48 68 51 68 56 Z" stroke-linecap="round" fill="none" />
+
+        <!-- i -->
+        <path d="M82 48 V64" />
+    </g>
+    
+    <!-- i Dot -->
+    <circle cx="82" cy="35" r="5" fill="#FFD700" />
+  </g>
+
+  <!-- Smile: Wider -->
+  <!-- Start 30, End 70 (Centered relative to 50, width 40). Deep Curve. -->
+  <!-- Centered relative to the entire bubble context (50), but maybe needs to follow text shift? usually smile is centered to bubble to look balanced. Let's keep centered to bubble first. -->
+  <path 
+    d="M30 74 Q 50 90 70 74" 
+    stroke="#FFD700" 
+    stroke-width="6" 
+    stroke-linecap="round" 
+    fill="none"
+  />
+</svg>

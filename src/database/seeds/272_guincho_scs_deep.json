@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1409eebb-6879-481e-abbd-4a6cfdb4d29f",
+    "name": "Guincho TLT",
+    "type": null,
+    "city_id": "d422ecad-80b4-450a-b364-ebb888d700e1",
+    "category_id": null,
+    "neighborhood": "Centro",
+    "address": "Rua Para, 139",
+    "whatsapp": "11984620630",
+    "phone": "11984620630",
+    "email": "guincho-tlt-1409ee@gmail.com",
+    "source": "manual_google",
+    "active": true,
+    "created_at": "2026-01-05T12:00:00.000Z",
+    "slug": "guincho-tlt-sao-caetano-do-sul-1409ee",
+    "category": "guincho",
+    "website": null,
+    "city_slug": "sao-caetano-do-sul",
+    "state": "SP",
+    "creci": null
+  }
+]

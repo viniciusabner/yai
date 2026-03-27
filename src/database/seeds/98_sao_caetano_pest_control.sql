@@ -1,0 +1,19 @@
+-- 98. Insert Pest Control (Dedetizadora) Providers (São Caetano do Sul)
+
+INSERT INTO public.providers (id, name, city_id, neighborhood, address, whatsapp, phone, email, source, active, slug, category, website, creci)
+VALUES
+  -- Encontrados com dados reais
+  (gen_random_uuid(), 'DDPilar Dedetizadora', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Centro', 'São Caetano do Sul - SP', '11943710171', '1145649919', null, 'manual_google', true, 'ddpilar-dedetizadora-sao-caetano', 'dedetizadora', 'https://dedetizadoraddpilar.com.br', null),
+  (gen_random_uuid(), 'Bio Soluções', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Centro', 'São Caetano do Sul - SP', '08000044000', null, null, 'manual_google', true, 'bio-solucoes-sao-caetano', 'dedetizadora', 'https://biosolucoes.app.br', null),
+  (gen_random_uuid(), 'Zet-Tec Dedetizadora', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Centro', 'São Caetano do Sul - SP', null, null, null, 'manual_google', true, 'zet-tec-dedetizadora-sao-caetano', 'dedetizadora', 'https://zet-tecdedetizadora.com.br', null),
+  (gen_random_uuid(), 'EccoClean Dedetizadora', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Centro', 'São Caetano do Sul - SP', null, null, null, 'manual_google', true, 'eccoclean-dedetizadora-sao-caetano', 'dedetizadora', 'https://eccocleandedetizacao.com.br', null),
+  (gen_random_uuid(), 'EcoServiços Dedetizadora', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Centro', 'São Caetano do Sul - SP', null, null, null, 'manual_google', true, 'ecoservicos-dedetizadora-sao-caetano', 'dedetizadora', 'https://ecoservicos.com.br', null),
+  (gen_random_uuid(), 'Protec Pragas', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Centro', 'São Caetano do Sul - SP', '11940103334', null, null, 'manual_google', true, 'protec-pragas-sao-caetano', 'dedetizadora', 'https://protecpragas.com.br', null),
+  (gen_random_uuid(), 'Hidromix Desentupidora e Dedetizadora', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Centro', 'São Caetano do Sul - SP', null, '1158194555', null, 'manual_google', true, 'hidromix-desentupidora-e-dedetizadora-sao-caetano', 'dedetizadora', 'https://hidromixdesentupidora.com.br', null),
+  (gen_random_uuid(), 'Lunar Dedetizadora', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Centro', 'São Caetano do Sul - SP', null, null, null, 'manual_google', true, 'lunar-dedetizadora-sao-caetano', 'dedetizadora', 'https://lunardedetizadora.com.br', null),
+  (gen_random_uuid(), 'Dedetizadora Galli', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Centro', 'São Caetano do Sul - SP', null, null, null, 'manual_google', true, 'dedetizadora-galli-sao-caetano', 'dedetizadora', 'https://gallidedetizadora.com.br', null),
+  (gen_random_uuid(), 'Universo Ambiental', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Centro', 'São Caetano do Sul - SP', null, null, null, 'manual_google', true, 'universo-ambiental-sao-caetano', 'dedetizadora', 'https://universoambiental.eco.br', null),
+  (gen_random_uuid(), 'Dedetizadora 24 Horas', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Centro', 'São Caetano do Sul - SP', null, '08007559000', null, 'manual_google', true, 'dedetizadora-24-horas-sao-caetano', 'dedetizadora', 'https://dedetizadora.srv.br', null),
+  (gen_random_uuid(), 'Dedetizadora SP', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Centro', 'São Caetano do Sul - SP', null, null, null, 'manual_google', true, 'dedetizadora-sp-sao-caetano', 'dedetizadora', null, null),
+  (gen_random_uuid(), 'Controle de Pragas ABC', (SELECT id FROM public.cities WHERE slug='sao-caetano-do-sul'), 'Centro', 'São Caetano do Sul - SP', null, null, null, 'manual_google', true, 'controle-de-pragas-abc-sao-caetano', 'dedetizadora', null, null)
+ON CONFLICT (slug) DO NOTHING;

@@ -1,0 +1,10 @@
+-- 46. Insert Plumbers (Encanador) Providers (Rio Grande da Serra)
+
+INSERT INTO public.providers (id, name, city_id, neighborhood, address, whatsapp, phone, email, source, active, slug, category, website, creci)
+VALUES
+  (gen_random_uuid(), 'Manutenção Residencial', (SELECT id FROM public.cities WHERE slug='rio-grande-da-serra'), 'Rio Grande da Serra', 'Rio Grande da Serra/SP', '11948931000', '11948931000', 'contato@manutencaoresidencial.srv.br', 'manual_google', true, 'manutencao-residencial-rio-grande-da-serra', 'encanador', 'https://www.manutencaoresidencial.srv.br', null),
+  (gen_random_uuid(), 'Marido de Aluguel Hidrotex', (SELECT id FROM public.cities WHERE slug='rio-grande-da-serra'), 'Rio Grande da Serra', 'Rio Grande da Serra/SP', '11948931000', '1141144004', 'contato@maridodealuguel.adm.br', 'manual_google', true, 'marido-de-aluguel-hidrotex-rio-grande-da-serra', 'encanador', 'https://www.maridodealuguel.adm.br', null),
+  (gen_random_uuid(), 'SOS Prestadora De Serviços', (SELECT id FROM public.cities WHERE slug='rio-grande-da-serra'), 'Rio Grande da Serra', 'Rio Grande da Serra/SP', '11997414460', '11997414460', 'contato@sosprestadoradeservicos.com.br', 'manual_google', true, 'sos-prestadora-de-servicos-rio-grande-da-serra', 'encanador', 'https://www.sosprestadoradeservicos.com.br', null),
+  (gen_random_uuid(), 'Universo Ambiental Encanador', (SELECT id FROM public.cities WHERE slug='rio-grande-da-serra'), 'Rio Grande da Serra', 'Rio Grande da Serra/SP', null, null, 'contato@universoambiental.eco.br', 'manual_google', true, 'universo-ambiental-encanador-rio-grande-da-serra', 'encanador', 'https://www.universoambiental.eco.br', null),
+  (gen_random_uuid(), 'JL Caça Vazamentos', (SELECT id FROM public.cities WHERE slug='rio-grande-da-serra'), 'Rio Grande da Serra', 'Rio Grande da Serra/SP', null, null, 'contato@jlcacavazamentos.com.br', 'manual_google', true, 'jl-caca-vazamentos-rio-grande-da-serra', 'encanador', 'https://www.jlcacavazamentos.com.br', null)
+ON CONFLICT (slug) DO NOTHING;
