@@ -113,7 +113,7 @@ const router = createBrowserRouter([
     path: '/forgot-password',
     element: <ForgotPassword />,
   },
-])
+], { basename: '/yai/' })
 
 export function Router() {
   return <RouterProvider router={router} />
