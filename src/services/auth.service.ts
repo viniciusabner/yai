@@ -5,7 +5,7 @@ export async function signInWithGoogle() {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
     options: {
-      redirectTo: `${window.location.origin}/`, // Redirect back to home
+      redirectTo: `${window.location.origin}${import.meta.env.BASE_URL}`, // Redirect back to app root
     },
   })
   if (error) throw error
@@ -63,7 +63,7 @@ export async function mergeAnonymousHistory() {
 
 export async function resetPasswordForEmail(email: string) {
   const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-    redirectTo: `${window.location.origin}/update-password`,
+    redirectTo: `${window.location.origin}${import.meta.env.BASE_URL}update-password`,
   })
   if (error) throw error
   return data
