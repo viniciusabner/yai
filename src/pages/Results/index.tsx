@@ -15,6 +15,7 @@ import { LoginUpsellModal } from '../../components/LoginUpsellModal'
 import { CompanyProfileModal } from '../../components/CompanyProfileModal'
 import { buildWhatsAppLink } from '../../utils/whatsapp'
 import { logContactEvent } from '../../services/providers.service'
+import { CATEGORIES } from '../../constants/categories'
 
 export function Results() {
   const navigate = useNavigate()
@@ -233,6 +234,8 @@ export function Results() {
     ? categoryMessages[selectedCategory] 
     : defaultMessageContent;
 
+  const categoryObj = CATEGORIES.find(c => c.id === selectedCategory);
+
   const selectedProvidersData = providers.filter(p => selectedProviders.includes(p.id))
 
   return (
@@ -243,12 +246,17 @@ export function Results() {
            <button onClick={() => navigate('/')} className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
              <ArrowLeft className="h-5 w-5 text-gray-600 dark:text-gray-400" />
            </button>
-           <h1 className="text-lg font-semibold text-gray-900 dark:text-white truncate">
-             {loading 
-               ? 'Carregando...' 
-               : `${providers.length} resultados em ${cityNames.length === 1 ? cityNames[0] : `${cityNames.length} cidades`}`
-             }
-           </h1>
+           <div className="flex flex-col truncate">
+             <h1 className="text-lg font-semibold text-gray-900 dark:text-white truncate">
+               {categoryObj ? categoryObj.name : 'Resultados'}
+             </h1>
+             <span className="text-sm font-normal text-gray-500 dark:text-gray-400 truncate">
+               {loading 
+                 ? 'Carregando...' 
+                 : `${providers.length} encontrados em ${cityNames.length === 1 ? cityNames[0] : `${cityNames.length} cidades`}`
+               }
+             </span>
+           </div>
          </div>
       </header>
 
