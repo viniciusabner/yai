@@ -1,0 +1,20 @@
+-- 298_real_personal_organizer_rgs.sql
+-- PERSONAL ORGANIZER — Rio Grande da Serra
+-- Fonte: Pesquisa manual Google/Maps
+-- Total: 0 registros verificáveis
+-- 
+-- ⚠️ RESULTADO DA PESQUISA:
+-- Não foram encontrados personal organizers verificáveis que atendam
+-- especificamente Rio Grande da Serra. As buscas retornaram apenas
+-- plataformas nacionais (GetNinjas, Habitissimo) que não são prestadores locais.
+-- 
+-- A profissão é predominantemente autônoma e divulgada via Instagram/redes sociais,
+-- sem presença em Google Maps ou diretórios locais para esta região.
+-- 
+-- Para popular esta categoria, seria necessário:
+-- 1. Busca manual em redes sociais (Instagram, Facebook grupos locais)
+-- 2. Indicações de moradores da região
+-- 3. Buscar profissionais de Santo André/SBC que atendam o Grande ABC
+--
+-- Arquivo criado vazio intencionalmente para documentar a ausência de dados.
+-- NÃO foram inventados dados fictícios.

@@ -4,7 +4,7 @@ VALUES
   (
     '2752ac72-98e0-4be0-afb5-b99e8aa1509a', 
     'Auto Mecânica Toninho', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Centro', 
     'Rua Monte Castelo, 39', 
     '1148285788', 
@@ -21,7 +21,7 @@ VALUES
   (
     '1ca8f24b-9111-4bb5-a10b-0bc5f999045b', 
     'Dito Auto Serviços', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Centro', 
     'Rua Capitão José Gallo, 868', 
     '1148254881', 
@@ -38,7 +38,7 @@ VALUES
   (
     'c3ca36a4-762e-4c6b-8c1e-58a2fd08de11', 
     'Auto Center Ribeirão', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Centro', 
     'Avenida Brasil, 500', 
     '1148231011', 
@@ -55,7 +55,7 @@ VALUES
   (
     '269c480b-aa12-4b6b-84ad-38a92a6d17c2', 
     'Centro Automotivo Cacilha', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Centro', 
     'Rua Alfredo Mendes da Silva, 26', 
     '1148231012', 
@@ -72,7 +72,7 @@ VALUES
   (
     'd840f2fb-9ee9-4ddc-9eb1-4ccecada2876', 
     'Centro Automotivo Gallopietro', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Centro', 
     'Avenida Brasil, 390', 
     '1148231013', 
@@ -89,7 +89,7 @@ VALUES
   (
     'a87f45e4-e173-4eda-891f-d03697f6da6f', 
     'Sandro Som (Mecânica e Acessórios)', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Centro', 
     'Av. Pref. Valdírio Prisco, 1016', 
     '1148231014', 
@@ -106,7 +106,7 @@ VALUES
   (
     '917a7193-3c6c-4bca-8bea-793267efb24c', 
     'Rl Valmir', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Centro', 
     'Rua Capitao José Gallo, 816', 
     '1148285620', 
@@ -123,7 +123,7 @@ VALUES
   (
     'f33f994b-eeff-4ce1-95cf-e6e4df0fca0a', 
     'AutoZone Brasil Comércio de Autopeças', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Centro', 
     'Av. Francisco Monteiro, 2053', 
     '1148231015', 
@@ -140,7 +140,7 @@ VALUES
   (
     '2b8c4a5f-ebff-42a2-b5ff-d9cdffd3212a', 
     'Auto Técnica Ouro Fino', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Ouro Fino Paulista', 
     'R. Iemanja, 5', 
     '1148223714', 
@@ -157,7 +157,7 @@ VALUES
   (
     'bf72b1a8-3412-491b-84be-e2a8948b0302', 
     'Auto Mecânica Bahia', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Ouro Fino Paulista', 
     'Rod. Índio Tibiriçá, 2827', 
     '1148221858', 
@@ -174,7 +174,7 @@ VALUES
   (
     '400f812c-951a-4de1-a044-7e46edc31909', 
     'Ouro Fino Indústria e Com', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Somma / Ouro Fino', 
     'Avenida Vereador Aroldo Alves Neves, 400', 
     '1121796161', 
@@ -191,7 +191,7 @@ VALUES
   (
     'ebd44a51-b2a9-4de1-aa66-085a765a5c13', 
     'Mecanica Augusto e Gustavo', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Ouro Fino Paulista', 
     'R. Leone Pisciota, 15', 
     '1148221016', 
@@ -208,7 +208,7 @@ VALUES
   (
     'f5d95ce0-222e-4428-8d7f-185774986fa7', 
     'Yamada Auto Mecânica', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Ouro Fino Paulista', 
     'Rua Antônio Peixoto Augusto, 188', 
     '1148221017', 
@@ -225,7 +225,7 @@ VALUES
   (
     'd2e2f1eb-adcc-4c18-9434-93221b383191', 
     'Mecânica do Adelino', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Vila Suely', 
     'R. Mal. Artur da Costa e Silva, 43', 
     '11986258006', 
@@ -242,7 +242,7 @@ VALUES
   (
     '8e962f67-2be5-434c-a130-27dbcb3556cb', 
     'Mobile Car Center', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santa Luzia', 
     'Avenida Francisco Monteiro, 1651', 
     '1146808879', 
@@ -259,7 +259,7 @@ VALUES
   (
     'a71693ac-13b0-4489-86e1-57511400afce', 
     'OFICINA MAIS', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santa Luzia', 
     'Avenida Francisco Monteiro, 2665', 
     '1148238668', 
@@ -276,7 +276,7 @@ VALUES
   (
     '2be244d6-227d-4a34-bd97-c72eac2ed96d', 
     'Auto Técnica Yamashita', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santa Luzia', 
     'Rua Odair Teixeira de Lima, 71', 
     '1148232560', 
@@ -293,7 +293,7 @@ VALUES
   (
     'ab47edc2-8f1e-440d-b1df-778b3c24f484', 
     'J R Mecânica', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santa Luzia', 
     'Avenida Francisco Monteiro, 2427', 
     '1148241861', 
@@ -310,7 +310,7 @@ VALUES
   (
     'fc55d283-4e03-4d58-84d1-1ce3eb946f5f', 
     'Check Up Motor', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santa Luzia', 
     'Avenida Francisco Monteiro, 2435', 
     '1148285100', 
@@ -327,7 +327,7 @@ VALUES
   (
     'eba26bca-d294-4c21-ba71-42cd549337fd', 
     'Peças Domingão', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santa Luzia', 
     'Av. Francisco Monteiro, 2540', 
     '1148284787', 
@@ -344,7 +344,7 @@ VALUES
   (
     'b531ba89-ebbb-4fb3-baab-0345e25dd0d7', 
     'Broders Centro Automotivo', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santa Luzia', 
     'Av. Francisco Monteiro, 985', 
     '1148281018', 
@@ -361,7 +361,7 @@ VALUES
   (
     '7460d249-d08c-42a6-a9ee-4c8e5999b8bc', 
     'Chame Diesel Oficina Mecanica', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santa Luzia', 
     'Sebastiao Bertoldo, 118', 
     '1148281019', 
@@ -378,7 +378,7 @@ VALUES
   (
     'ed987d7c-f44b-4e1a-9f53-5eb3dcb9e6d3', 
     'Centro Automotivo Shalon', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Aliança', 
     'Avenida Princesa Izabel, 805', 
     '1148256269', 
@@ -395,7 +395,7 @@ VALUES
   (
     '3370ab0c-d914-4ba5-a1b9-15b0308b94f1', 
     'Oficina Mecânica PÉ CAR', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Aliança', 
     'Av. Princesa Isabel, 1000', 
     '1148246544', 
@@ -412,7 +412,7 @@ VALUES
   (
     '261c8028-2196-4a98-802c-e81538ece381', 
     'Diasmatic Oficina Mecânica', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Aliança', 
     'Av Psa Izabel, 1607', 
     '1148281044', 
@@ -429,7 +429,7 @@ VALUES
   (
     '5b244068-3a02-4371-9e58-86255ad556d5', 
     'Auto Mecânica Claudinho', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santana', 
     'Rua Anastácio de Lima, 13', 
     '1148276795', 
@@ -446,7 +446,7 @@ VALUES
   (
     '79cc690d-aa7d-4c38-be72-fe51b3cf7b43', 
     'Corvette Reparos', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santana', 
     'Avenida Francisco Monteiro, 1488', 
     '1148275401', 
@@ -463,7 +463,7 @@ VALUES
   (
     '58f6faee-6c14-495d-b9e7-c9dc7d370af6', 
     'JOAO ROBERTO CASSIANO CENTRO AUTOMOTIVO', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santana', 
     'Rua Pedro del Corto, 216', 
     '1145141173', 
@@ -480,7 +480,7 @@ VALUES
   (
     '9eb85cef-801b-4849-a605-705df30fd081', 
     'ADC Motors Santana', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santana', 
     'Rua Alexandre de Mello e Faro, 17', 
     '1148265547', 
@@ -497,7 +497,7 @@ VALUES
   (
     '6b270d04-2e3e-4f70-9926-c1c8ab5cc83d', 
     'Aerocar Reparos Automotivos', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santana', 
     'Rua Eugênio Roncon, 13', 
     '1148285940', 
@@ -514,7 +514,7 @@ VALUES
   (
     '1705790a-edf1-4ad9-adb8-f08e51011dc1', 
     'Ribeirão Autopeças (Centro Automotivo)', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Santana', 
     'Avenida Francisco Monteiro, 1255', 
     '1148271477', 
@@ -531,7 +531,7 @@ VALUES
   (
     '3c38b793-88e1-499a-ad9e-f82ae2c2378e', 
     'Boareto Centro Automotivo', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Suíssa', 
     'Avenida Humberto de Campos, 173', 
     '1148253000', 
@@ -548,7 +548,7 @@ VALUES
   (
     '5e4da959-bbe2-4330-bce0-b09e9a6fa6eb', 
     'Auto Mecânica Edmilson', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Suíssa', 
     'Rua Lourenço Pavani, 31', 
     '1142680525', 
@@ -565,7 +565,7 @@ VALUES
   (
     'd72a45ec-b821-4489-81f6-f99caa4531e3', 
     'Kmar Car Service', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Suíssa', 
     'Rua Major Cardim, 580', 
     '1142681020', 
@@ -582,7 +582,7 @@ VALUES
   (
     '3fc67ba6-daae-489f-b4ac-d788f9c6a7a9', 
     'G.M. Reparos Automotivos', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Suíssa', 
     'Avenida Santo André, 364', 
     '1142681021', 
@@ -599,7 +599,7 @@ VALUES
   (
     'ea6ca325-57d5-4ef1-87ea-9ba029081b08', 
     'Automecânica Arlindo', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Colônia', 
     'Rua Nazareno Romaldini, 108', 
     '1148282477', 
@@ -616,7 +616,7 @@ VALUES
   (
     'fc6de39d-8e9b-4ed6-8b39-44b81b3d48f9', 
     'Mecânica Diesel Paulinho', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Colônia', 
     'R. Olinda, 3590', 
     '1148281022', 
@@ -633,7 +633,7 @@ VALUES
   (
     '90c6ab1c-27e7-400e-81b3-35e94ea52d7b', 
     'Barão Ar Condicionado Automotivo', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Colônia', 
     'R. Santo Bertoldo, 162', 
     '1148281023', 
@@ -650,7 +650,7 @@ VALUES
   (
     '27dbb242-524f-4511-b8bc-db146e6bf3b2', 
     'Auto Elétrica Boy', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Colônia', 
     'R. Santo Bertoldo, 270', 
     '1148281024', 
@@ -667,7 +667,7 @@ VALUES
   (
     '091187df-dfaf-4f50-b065-70c18babd31e', 
     'Carlão Dkw', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Centro Alto', 
     'Rua Alfredo Mendes da Silva, 54', 
     '1148287677', 
@@ -684,7 +684,7 @@ VALUES
   (
     '15f5612b-677b-4581-809a-61a2e259efd9', 
     'Garagem NOÇÃO RP', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Centro Alto', 
     'Av. Santo André, 365', 
     '11974100000', 
@@ -701,7 +701,7 @@ VALUES
   (
     '87d1461e-695e-4764-b5aa-92efabd44f43', 
     'VITOR SILVA CARLOS Mecânica', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Centro Alto', 
     'Av. Santo André', 
     '11974101000', 
@@ -718,7 +718,7 @@ VALUES
   (
     '3349527b-6139-4d71-bbe4-264a9005e10d', 
     'Divisão Car Mecânica e Peças', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Quarta Divisão', 
     'Avenida Miro Atílio Peduzzi', 
     '1148293503', 
@@ -735,7 +735,7 @@ VALUES
   (
     'a275ee0c-2189-46d1-971e-4301f7f34bdf', 
     'Speed Diesel Pastoril', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Pastoril', 
     'R. Antônio Figueiredo Filho', 
     '11981679150', 
@@ -752,7 +752,7 @@ VALUES
   (
     'e0ba1b33-04b8-42fe-9391-4c1b7c9f2a5d', 
     'Kewpie Mecânica', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Pastoril', 
     'R. Comendador Hugo Winter, 85a', 
     '1332391334', 
@@ -769,7 +769,7 @@ VALUES
   (
     '4d9b0078-16b1-4e01-bdcd-05f69ee16876', 
     'A Y C Dedio Autocenter', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Pastoril', 
     'Rua Comendador Hugo Winter, 85', 
     '1148282982', 
@@ -786,7 +786,7 @@ VALUES
   (
     'a7d9c6da-8999-4dfa-8289-48e3f2dd877d', 
     'Alecar Centro Automotivo', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Bocaina', 
     'Avenida Humberto de Campos, 1780', 
     '1148285538', 
@@ -803,7 +803,7 @@ VALUES
   (
     '39b3e093-34eb-42f5-a19f-a27da7d7fc48', 
     'S.R.S. Oficina Mecânica', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Bocaina', 
     'Av. Humberto de Campos, 580', 
     '11999907513', 
@@ -820,7 +820,7 @@ VALUES
   (
     '1813ecd5-cfa6-432f-a874-6d46f9b67a5e', 
     'Centro Automotivo Cruzeiro do Sul', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Bocaina', 
     'Avenida Humberto de Campos, 1888 A', 
     '1148281026', 
@@ -837,7 +837,7 @@ VALUES
   (
     '3ff5efaf-51a6-44d2-958e-f36b81e8b4e0', 
     'Roda Chavaska Auto Center', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Bocaina', 
     'Avenida Humberto de Campos, 660', 
     '1148281027', 
@@ -854,7 +854,7 @@ VALUES
   (
     '5a75cc86-2b0e-43d6-9fbb-627be5cb1d98', 
     'MECANICA AUTOMOTIVA VILA ALBERTINA', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Vila Albertina', 
     'R. Diamantino de Oliveira, 15', 
     '1148281028', 
@@ -871,7 +871,7 @@ VALUES
   (
     'c141c68c-fde2-4523-ba1e-6a92221a29d5', 
     'Santana Comércio Peças Elétricas', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Jardim São Francisco', 
     'Rua Antonieta Colalilo Cordeiro, 3', 
     '1148282560', 
@@ -888,7 +888,7 @@ VALUES
   (
     'd744a774-2172-4d07-a19c-43c2e62669f2', 
     'Nascimento Automotivo', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Ribeirão Pires', 
     'Rua Flórida Paulista, 66', 
     '1148282640', 
@@ -905,7 +905,7 @@ VALUES
   (
     'ecd0bb13-f550-4ba4-84b2-3f78d10cbec0', 
     'Maciel Centro Automotivo', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Ribeirão Pires', 
     'Avenida Francisco Monteiro 3650', 
     '1148281029', 
@@ -922,7 +922,7 @@ VALUES
   (
     '93b6569e-097d-4b9d-93f0-85e548c2a9b2', 
     'Lipe Car Auto Center', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Ribeirão Pires', 
     'Ribeirão Pires, SP', 
     '11968590864', 
@@ -939,7 +939,7 @@ VALUES
   (
     'cd7fb3a1-69a7-45c5-854b-6191395ef0e2', 
     'Copam Auto Peças', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Ribeirão Pires', 
     'Rodovia Índio Tibiriçá, 2061', 
     '1148256478', 
@@ -956,7 +956,7 @@ VALUES
   (
     '84383e25-9dbe-4c0e-9b99-2a05251b3e36', 
     'Trevo Posto de Molas', 
-    (SELECT id FROM public.cities WHERE slug='ribeirao-pires'), 
+    '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
     'Ribeirão Pires', 
     'Rodovia Índio Tibiriçá, 6440', 
     '1148285733', 
@@ -970,4 +970,6 @@ VALUES
     'ribeirao-pires', 
     'SP'
   )
-ON CONFLICT (id) DO NOTHING;
+ON CONFLICT (slug) DO UPDATE SET
+  city_id = EXCLUDED.city_id,
+  category = EXCLUDED.category;

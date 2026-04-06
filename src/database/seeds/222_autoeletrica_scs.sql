@@ -13,7 +13,7 @@ VALUES
     'manual_google', 
     true, 
     'qualicenter-auto-sao-caetano-do-sul-cc2a91', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -30,7 +30,7 @@ VALUES
     'manual_google', 
     true, 
     'ms-centro-automotivo-sao-caetano-do-sul-4bac16', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -47,7 +47,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-piratininga-sao-caetano-do-sul-0538f9', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -64,7 +64,7 @@ VALUES
     'manual_google', 
     true, 
     'caesa-comercio-e-auto-eletrica-santo-andre-sao-caetano-do-sul-d77579', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -81,7 +81,7 @@ VALUES
     'manual_google', 
     true, 
     'lch-auto-eletrica-e-mecanica-sao-caetano-do-sul-2d275c', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -98,7 +98,7 @@ VALUES
     'manual_google', 
     true, 
     'lucar-auto-eletrico-vidros-e-fechaduras-sao-caetano-do-sul-770a15', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -115,7 +115,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-elton-vilela-sao-caetano-do-sul-abae50', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -132,7 +132,7 @@ VALUES
     'manual_google', 
     true, 
     'base-servicos-automotivos-sao-caetano-do-sul-51310b', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -149,7 +149,7 @@ VALUES
     'manual_google', 
     true, 
     'casagrande-auto-mecanica-e-eletrica-ltda-sao-caetano-do-sul-b61515', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -166,7 +166,7 @@ VALUES
     'manual_google', 
     true, 
     'shinozaki-auto-eletrico-sao-caetano-do-sul-400ba7', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -183,7 +183,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-belazzi-sao-caetano-do-sul-214b1f', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -200,7 +200,7 @@ VALUES
     'manual_google', 
     true, 
     'ab-devair-sampaio-reparacoes-automotivas-sao-caetano-do-sul-126e4f', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -217,7 +217,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-porto-e-polisel-sao-caetano-do-sul-f46181', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -234,7 +234,7 @@ VALUES
     'manual_google', 
     true, 
     'bateria-system-sao-caetano-do-sul-77a585', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -251,7 +251,7 @@ VALUES
     'manual_google', 
     true, 
     'sao-caetano-baterias-sao-caetano-do-sul-160e8c', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -268,7 +268,7 @@ VALUES
     'manual_google', 
     true, 
     'mega-baterias-sao-caetano-do-sul-4488c7', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -285,7 +285,7 @@ VALUES
     'manual_google', 
     true, 
     'stop-star-baterias-sao-caetano-do-sul-bcb90d', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -302,7 +302,7 @@ VALUES
     'manual_google', 
     true, 
     'parceiro-baterias-sao-caetano-do-sul-eaf300', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'
@@ -319,7 +319,7 @@ VALUES
     'manual_google', 
     true, 
     'everauto-scs-sao-caetano-do-sul-2b4d7a', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-caetano-do-sul', 
     'SP'

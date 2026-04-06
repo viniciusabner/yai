@@ -6,19 +6,19 @@
 DELETE FROM contact_events
 WHERE provider_id IN (
   SELECT id FROM providers 
-  WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'desentupidora')
+  WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'desentupidora')
   OR slug LIKE '%-ribeirao-pires' AND category = 'desentupidora'
 );
 
 DELETE FROM conversations
 WHERE provider_id IN (
   SELECT id FROM providers 
-  WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'desentupidora')
+  WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'desentupidora')
   OR slug LIKE '%-ribeirao-pires' AND category = 'desentupidora'
 );
 
 DELETE FROM providers 
-WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'desentupidora')
+WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'desentupidora')
 OR slug LIKE '%-ribeirao-pires' AND category = 'desentupidora';
 
 
@@ -29,7 +29,7 @@ INSERT INTO providers (
 ) VALUES (
   '918fcf98-48a4-4ba9-9e03-a04372ee4a37', 
   'Desentupidora Mais Ribeirão Pires', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Centro', 
@@ -44,7 +44,9 @@ INSERT INTO providers (
   5.0, 
   'manual_google',
   '2026-02-13T15:00:00.000Z'
-) ON CONFLICT (slug) DO UPDATE SET 
+) ON CONFLICT (slug) DO UPDATE SET
+  city_id = EXCLUDED.city_id,
+  category = EXCLUDED.category, 
   name = EXCLUDED.name,
   phone = EXCLUDED.phone,
   whatsapp = EXCLUDED.whatsapp,
@@ -61,7 +63,7 @@ INSERT INTO providers (
 ) VALUES (
   '9a6d1c1e-c8e6-4c98-9615-06c83234ef28', 
   'JBC Desentupidora', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Centro', 
@@ -93,7 +95,7 @@ INSERT INTO providers (
 ) VALUES (
   '093fc782-42d9-4189-a357-291d0f98e4e4', 
   'Rei do Esgoto Ribeirão Pires', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Centro', 
@@ -125,7 +127,7 @@ INSERT INTO providers (
 ) VALUES (
   '82c17b4a-99f4-44f0-9f31-f74eb9bbf63c', 
   'Desentupidora Ribeirão Pires 24h', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Centro', 
@@ -157,7 +159,7 @@ INSERT INTO providers (
 ) VALUES (
   '0793cc68-04e8-429c-8e4f-541001055298', 
   'Cidade Desentupimento', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Centro', 
@@ -189,7 +191,7 @@ INSERT INTO providers (
 ) VALUES (
   'bd715fac-8966-44c2-ba69-8d8b4086a2ff', 
   'Desentupidora SP Ribeirão Pires', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Centro', 
@@ -221,7 +223,7 @@ INSERT INTO providers (
 ) VALUES (
   '86314790-bae6-41c1-b177-2534412928e0', 
   'Desentupidora RP Centro', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Centro', 
@@ -253,7 +255,7 @@ INSERT INTO providers (
 ) VALUES (
   '12be0586-c177-464d-934f-e17528f81ff6', 
   'Super Limp Desentupidora', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Centro', 
@@ -285,7 +287,7 @@ INSERT INTO providers (
 ) VALUES (
   '9c0d0587-6d94-4361-a60b-0f5a729d0e08', 
   'Desentupidora Brasileira', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Centro', 
@@ -317,7 +319,7 @@ INSERT INTO providers (
 ) VALUES (
   'd11a1916-a5ac-4013-918b-7c75448a8474', 
   'Desentupidora Guardião Ouro Fino', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Ouro Fino Paulista', 
@@ -349,7 +351,7 @@ INSERT INTO providers (
 ) VALUES (
   '00276a21-4848-43f1-bc76-d8c5cb458f1a', 
   'Desentupidora Ouro Fino RP', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Ouro Fino Paulista', 
@@ -381,7 +383,7 @@ INSERT INTO providers (
 ) VALUES (
   '27d0608a-cc9c-47ee-87de-2e69debb2729', 
   'Ótima Desentupidora', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Quarta Divisão', 
@@ -413,7 +415,7 @@ INSERT INTO providers (
 ) VALUES (
   '3d4ab2bf-bd5e-46f8-8071-db1f280fab1a', 
   'Nova Capital Desentupidora Soma', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Soma', 
@@ -445,7 +447,7 @@ INSERT INTO providers (
 ) VALUES (
   '4c757452-0e43-4838-b8e7-e199a49ed2c4', 
   'Limpa Fossa Ribeirão Pires', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Jardim Ribeirão Pires', 
@@ -477,7 +479,7 @@ INSERT INTO providers (
 ) VALUES (
   '6834623b-8d92-46e9-b07b-92f1dabbd718', 
   'Desentupidora Rei dos Reis RP', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'desentupidora' OR name ILIKE '%Desentupidor%' LIMIT 1), 
   'desentupidora', 
   'Jardim Ribeirão Pires', 

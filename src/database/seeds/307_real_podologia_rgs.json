@@ -1,0 +1,4 @@
+[
+  {"id":"gen_random_uuid()","name":"HBClin Podologia","type":null,"city_id":"Rio Grande da Serra","category_id":null,"neighborhood":"Centro","address":"Av. Dom Pedro I, 475 - Sala 4","whatsapp":"11943464969","phone":"1127701181","email":null,"source":"manual_google","active":true,"created_at":"2026-03-31T12:00:00","slug":"hbclin-podologia-rio-grande-da-serra","category":"podologia","website":"https://hbclin.com.br","city_slug":"rio-grande-da-serra","state":"SP","creci":null},
+  {"id":"gen_random_uuid()","name":"Espaço Cuidare Podologia e Estética","type":null,"city_id":"Rio Grande da Serra","category_id":null,"neighborhood":"Centro","address":"Rua José Maria Figueiredo, 169","whatsapp":null,"phone":null,"email":null,"source":"manual_google","active":true,"created_at":"2026-03-31T12:00:00","slug":"espaco-cuidare-podologia-rio-grande-da-serra","category":"podologia","website":null,"city_slug":"rio-grande-da-serra","state":"SP","creci":null}
+]

@@ -13,7 +13,7 @@ VALUES
     'manual_google', 
     true, 
     'recondisa-diadema-0d524d', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -30,7 +30,7 @@ VALUES
     'manual_google', 
     true, 
     'autoeletrica-yamaoka-diadema-2924d9', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -47,7 +47,7 @@ VALUES
     'manual_google', 
     true, 
     'autoeletrico-pl-diadema-33efc5', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -64,7 +64,7 @@ VALUES
     'manual_google', 
     true, 
     'primo-s-car-auto-eletrico-som-automotivo-diadema-ce80d5', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -81,7 +81,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-orense-diadema-83c4ed', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -98,7 +98,7 @@ VALUES
     'manual_google', 
     true, 
     'classicar-auto-eletrico-acessorios-diadema-c4486a', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -115,7 +115,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-e-mecanica-beltrame-diadema-6fb287', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -132,7 +132,7 @@ VALUES
     'manual_google', 
     true, 
     'omega-auto-eletrico-diadema-a88296', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -149,7 +149,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-ninja-diadema-a24b8c', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -166,7 +166,7 @@ VALUES
     'manual_google', 
     true, 
     'chekcar-auto-eletrica-diadema-c34c4d', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -183,7 +183,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-funcional-hmh-diadema-5708d9', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -200,7 +200,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-mega-som-diadema-795568', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -217,7 +217,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-megaluz-diadema-afa052', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -234,7 +234,7 @@ VALUES
     'manual_google', 
     true, 
     'diadema-baterias-diadema-30d3cf', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -251,7 +251,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-comercio-lambari-diadema-d22783', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -268,7 +268,7 @@ VALUES
     'manual_google', 
     true, 
     'baterias-casa-grande-diadema-8773ab', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -285,7 +285,7 @@ VALUES
     'manual_google', 
     true, 
     'autoeletrico-dando-jeito-diadema-484927', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -302,7 +302,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-reis-diadema-0edcc8', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -319,7 +319,7 @@ VALUES
     'manual_google', 
     true, 
     'dimi-car-mecanica-e-autoeletrica-diadema-7761aa', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -336,7 +336,7 @@ VALUES
     'manual_google', 
     true, 
     'oficina-brasil-diadema-diadema-d288cc', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -353,7 +353,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-e-mecanica-paraiba-diadema-7fb96a', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -370,7 +370,7 @@ VALUES
     'manual_google', 
     true, 
     'autoeletrico-mec-vila-nogueira-diadema-4b44ee', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -387,7 +387,7 @@ VALUES
     'manual_google', 
     true, 
     'gm-autoeletrico-diadema-f07411', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -404,7 +404,7 @@ VALUES
     'manual_google', 
     true, 
     'kati-auto-mecanica-diadema-7ef644', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -421,7 +421,7 @@ VALUES
     'manual_google', 
     true, 
     'center-sul-baterias-diadema-49e766', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -438,7 +438,7 @@ VALUES
     'manual_google', 
     true, 
     'ss-auto-eletrica-diadema-3d6f2c', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -455,7 +455,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-bigluz-conceicao-diadema-57145c', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -472,7 +472,7 @@ VALUES
     'manual_google', 
     true, 
     'nova-era-eletrica-e-injecao-eletronica-diadema-6e62e2', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -489,7 +489,7 @@ VALUES
     'manual_google', 
     true, 
     'venom-car-service-diadema-9f63ae', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -506,7 +506,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-kamogawa-diadema-585135', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -523,7 +523,7 @@ VALUES
     'manual_google', 
     true, 
     'car-one-oficina-especializada-em-auto-eletrico-diadema-63e468', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -540,7 +540,7 @@ VALUES
     'manual_google', 
     true, 
     'autoeletrico-julio-diadema-767695', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'
@@ -557,7 +557,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-d-pedro-diadema-c690bb', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'diadema', 
     'SP'

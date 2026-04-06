@@ -6,19 +6,19 @@
 DELETE FROM contact_events
 WHERE provider_id IN (
   SELECT id FROM providers 
-  WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'gesseiro')
+  WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'gesseiro')
   OR slug LIKE '%-ribeirao-pires' AND category = 'gesseiro'
 );
 
 DELETE FROM conversations
 WHERE provider_id IN (
   SELECT id FROM providers 
-  WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'gesseiro')
+  WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'gesseiro')
   OR slug LIKE '%-ribeirao-pires' AND category = 'gesseiro'
 );
 
 DELETE FROM providers 
-WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'gesseiro')
+WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'gesseiro')
 OR slug LIKE '%-ribeirao-pires' AND category = 'gesseiro';
 
 
@@ -30,7 +30,7 @@ INSERT INTO providers (
 ) VALUES (
   '632b8779-f13d-451b-845f-16fb2a1d9fc6', 
   'O Gesseiro Ribeirão Pires', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'gesseiro' OR name ILIKE '%Gesseiro%' LIMIT 1), 
   'gesseiro', 
   'Centro', 
@@ -45,7 +45,9 @@ INSERT INTO providers (
   5.0, 
   'manual_google',
   '2026-02-13T15:00:00.000Z'
-) ON CONFLICT (slug) DO UPDATE SET 
+) ON CONFLICT (slug) DO UPDATE SET
+  city_id = EXCLUDED.city_id,
+  category = EXCLUDED.category, 
   name = EXCLUDED.name,
   phone = EXCLUDED.phone,
   whatsapp = EXCLUDED.whatsapp,
@@ -63,7 +65,7 @@ INSERT INTO providers (
 ) VALUES (
   '5b92517e-dde2-4f14-a517-9c31a5af945b', 
   'Gesso Juliana', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'gesseiro' OR name ILIKE '%Gesseiro%' LIMIT 1), 
   'gesseiro', 
   'Santa Luzia', 
@@ -96,7 +98,7 @@ INSERT INTO providers (
 ) VALUES (
   '25ecbd87-7adb-4893-a7d9-0d02a5f06558', 
   'Gesso Ribeirão', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'gesseiro' OR name ILIKE '%Gesseiro%' LIMIT 1), 
   'gesseiro', 
   'Centro', 
@@ -129,7 +131,7 @@ INSERT INTO providers (
 ) VALUES (
   'efbbcfc7-65f3-4a53-8d99-44593904a246', 
   'RM Gesso', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'gesseiro' OR name ILIKE '%Gesseiro%' LIMIT 1), 
   'gesseiro', 
   'Parque Aliança', 
@@ -162,7 +164,7 @@ INSERT INTO providers (
 ) VALUES (
   'c36e20ec-aaa8-4b2d-a03b-8648049b1e9c', 
   'JMG Gesso Decorações', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'gesseiro' OR name ILIKE '%Gesseiro%' LIMIT 1), 
   'gesseiro', 
   'Vila Sueli', 
@@ -195,7 +197,7 @@ INSERT INTO providers (
 ) VALUES (
   'a87b59eb-3377-40ca-b6e2-f5fb03ff5b61', 
   'Mari Decorações em Gesso', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'gesseiro' OR name ILIKE '%Gesseiro%' LIMIT 1), 
   'gesseiro', 
   'Santa Luzia', 
@@ -228,7 +230,7 @@ INSERT INTO providers (
 ) VALUES (
   '0d53a51b-562e-4c28-a91b-78edaaefa5f7', 
   'Gesso Guanabara', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'gesseiro' OR name ILIKE '%Gesseiro%' LIMIT 1), 
   'gesseiro', 
   'Centro', 
@@ -261,7 +263,7 @@ INSERT INTO providers (
 ) VALUES (
   'f8b69fcd-d166-4807-95bc-56094ad30ec0', 
   'Manoel Neto Figueredo Gesso', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'gesseiro' OR name ILIKE '%Gesseiro%' LIMIT 1), 
   'gesseiro', 
   'Represa', 
@@ -294,7 +296,7 @@ INSERT INTO providers (
 ) VALUES (
   '13af3e87-3815-40aa-ace2-01c3b9276c69', 
   'Nilton Gesso', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'gesseiro' OR name ILIKE '%Gesseiro%' LIMIT 1), 
   'gesseiro', 
   'Jardim Roncon', 

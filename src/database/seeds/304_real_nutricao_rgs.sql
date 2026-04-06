@@ -1,0 +1,10 @@
+-- 304_real_nutricao_rgs.sql
+-- NUTRICIONISTAS — Rio Grande da Serra
+-- Fonte: Google Maps + web search
+-- Total: 0 registros verificáveis
+--
+-- Não foram encontrados consultórios exclusivos de nutrição no Google Maps em RGS.
+-- Profissionais desta área geralmente atendem dentro de clínicas multidisciplinares
+-- como HBClin ou Orthus (já cadastradas em outras categorias).
+-- Para popular esta categoria seria necessário busca em redes sociais ou Doctoralia.
+-- NÃO foram inventados dados fictícios.

@@ -13,7 +13,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-e-mecanica-municipal-sao-bernardo-do-campo-951bb6', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -30,7 +30,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-wilcar-sao-bernardo-do-campo-9b5b4d', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -47,7 +47,7 @@ VALUES
     'manual_google', 
     true, 
     'autel-auto-eletrico-comercio-de-pecas-e-acessorios-sao-bernardo-do-campo-632b82', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -64,7 +64,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-afonsina-sao-bernardo-do-campo-f6f5dd', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -81,7 +81,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-vergueiro-ltda-sao-bernardo-do-campo-a1cebc', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -98,7 +98,7 @@ VALUES
     'manual_google', 
     true, 
     'yukihiro-auto-eletrico-sao-bernardo-do-campo-0a3681', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -115,7 +115,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-alemao-sao-bernardo-do-campo-691ad8', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -132,7 +132,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-pauliceia-sao-bernardo-do-campo-184c45', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -149,7 +149,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-e-oficina-mecanica-hiroshi-sao-bernardo-do-campo-0ff6b9', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -166,7 +166,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-terazawa-sao-bernardo-do-campo-2c2990', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -183,7 +183,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-panzarini-sao-bernardo-do-campo-1dd337', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -200,7 +200,7 @@ VALUES
     'manual_google', 
     true, 
     'alexandre-aparecido-prado-martins-auto-eletrica-sao-bernardo-do-campo-4d6935', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -217,7 +217,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-lao-sao-bernardo-do-campo-fc1d2a', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -234,7 +234,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-g-l-n-sao-bernardo-do-campo-92840f', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -251,7 +251,7 @@ VALUES
     'manual_google', 
     true, 
     'eos-autoeletrico-sao-bernardo-do-campo-b2ca9f', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -268,7 +268,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-jm-monteiro-ltda-sao-bernardo-do-campo-635842', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -285,7 +285,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-e-pecas-tudo-azul-sao-bernardo-do-campo-b9ed7b', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -302,7 +302,7 @@ VALUES
     'manual_google', 
     true, 
     'equips-som-auto-eletrico-sao-bernardo-do-campo-d642a6', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -319,7 +319,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-simoes-sao-bernardo-do-campo-952933', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -336,7 +336,7 @@ VALUES
     'manual_google', 
     true, 
     'casa-de-baterias-assuncao-sao-bernardo-do-campo-d45d11', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -353,7 +353,7 @@ VALUES
     'manual_google', 
     true, 
     'mp-manutencoes-24h-sao-bernardo-do-campo-52f571', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -370,7 +370,7 @@ VALUES
     'manual_google', 
     true, 
     'lr-pecas-eletricas-sao-bernardo-do-campo-35c56f', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -387,7 +387,7 @@ VALUES
     'manual_google', 
     true, 
     'sbc-baterias-sao-bernardo-do-campo-49f0ef', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -404,7 +404,7 @@ VALUES
     'manual_google', 
     true, 
     'espaco-baterias-sao-bernardo-do-campo-7f0bf9', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -421,7 +421,7 @@ VALUES
     'manual_google', 
     true, 
     'sao-bernardo-baterias-sao-bernardo-do-campo-4b11b3', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -438,7 +438,7 @@ VALUES
     'manual_google', 
     true, 
     'centauro-baterias-sao-bernardo-do-campo-87cf8f', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -455,7 +455,7 @@ VALUES
     'manual_google', 
     true, 
     'autocarabc-baterias-24hs-sao-bernardo-do-campo-fcecd5', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -472,7 +472,7 @@ VALUES
     'manual_google', 
     true, 
     'fast-autopecas-e-auto-servico-sao-bernardo-do-campo-4fc2a7', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -489,7 +489,7 @@ VALUES
     'manual_google', 
     true, 
     'everauto-sao-bernardo-do-campo-3d58ec', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'
@@ -506,7 +506,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-dakar-sao-bernardo-do-campo-3de30a', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'sao-bernardo-do-campo', 
     'SP'

@@ -13,7 +13,7 @@ VALUES
     'manual_google', 
     true, 
     's-l-auto-eletrico-santo-andre-f8bc6f', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -30,7 +30,7 @@ VALUES
     'manual_google', 
     true, 
     'mg-auto-eletrico-santo-andre-4b4779', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -47,7 +47,7 @@ VALUES
     'manual_google', 
     true, 
     'autoeletrico-injecar-santo-andre-69c20c', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -64,7 +64,7 @@ VALUES
     'manual_google', 
     true, 
     'stanguini-auto-center-santo-andre-4359eb', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -81,7 +81,7 @@ VALUES
     'manual_google', 
     true, 
     'gu-som-e-acessorios-auto-eletrico-santo-andre-5a3f6b', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -98,7 +98,7 @@ VALUES
     'manual_google', 
     true, 
     'sr-auto-eletrico-santo-andre-5e6166', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -115,7 +115,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-center-camilopolis-santo-andre-ea989b', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -132,7 +132,7 @@ VALUES
     'manual_google', 
     true, 
     'pinoche-auto-eletrico-som-car-santo-andre-99222f', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -149,7 +149,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-assis-santo-andre-505005', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -166,7 +166,7 @@ VALUES
     'manual_google', 
     true, 
     'autoeletrico-sao-jose-santo-andre-111883', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -183,7 +183,7 @@ VALUES
     'manual_google', 
     true, 
     'autoeletrico-logus-santo-andre-f03151', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -200,7 +200,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-vitalis-santo-andre-f48778', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -217,7 +217,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-marina-santo-andre-26b16c', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -234,7 +234,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-utinga-santo-andre-9a7d74', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -251,7 +251,7 @@ VALUES
     'manual_google', 
     true, 
     'hosaka-auto-som-e-eletrica-santo-andre-a0ca47', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -268,7 +268,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-guaxupe-santo-andre-b93a5c', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -285,7 +285,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-petrim-santo-andre-028b0f', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -302,7 +302,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-sol-santo-andre-f8a482', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -319,7 +319,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-makimoto-santo-andre-99ae99', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -336,7 +336,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-luiz-santo-andre-cba4b9', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -353,7 +353,7 @@ VALUES
     'manual_google', 
     true, 
     'autoeletrica-fernando-santo-andre-bd3702', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -370,7 +370,7 @@ VALUES
     'manual_google', 
     true, 
     'pini-s-som-santo-andre-4784e9', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -387,7 +387,7 @@ VALUES
     'manual_google', 
     true, 
     'autoeletrico-nissei-santo-andre-053928', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -404,7 +404,7 @@ VALUES
     'manual_google', 
     true, 
     'autoeletrico-makimoto-queiros-filho-santo-andre-872570', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -421,7 +421,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-parana-santo-andre-12f753', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -438,7 +438,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-mecanica-e-eletrica-marco-polo-santo-andre-727fc1', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -455,7 +455,7 @@ VALUES
     'manual_google', 
     true, 
     'real-auto-eletrica-santo-andre-c296ef', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -472,7 +472,7 @@ VALUES
     'manual_google', 
     true, 
     'autoeletrico-luna-santo-andre-3bde31', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -489,7 +489,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-pecas-eletricas-moncao-santo-andre-fb6e17', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'
@@ -506,7 +506,7 @@ VALUES
     'manual_google', 
     true, 
     'parizotto-motors-auto-eletrico-santo-andre-346667', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'santo-andre', 
     'SP'

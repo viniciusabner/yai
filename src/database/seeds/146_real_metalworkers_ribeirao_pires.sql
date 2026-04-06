@@ -6,19 +6,19 @@
 DELETE FROM contact_events
 WHERE provider_id IN (
   SELECT id FROM providers 
-  WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'serralheiro')
+  WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'serralheiro')
   OR slug LIKE '%-ribeirao-pires' AND category = 'serralheiro'
 );
 
 DELETE FROM conversations
 WHERE provider_id IN (
   SELECT id FROM providers 
-  WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'serralheiro')
+  WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'serralheiro')
   OR slug LIKE '%-ribeirao-pires' AND category = 'serralheiro'
 );
 
 DELETE FROM providers 
-WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'serralheiro')
+WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'serralheiro')
 OR slug LIKE '%-ribeirao-pires' AND category = 'serralheiro';
 
 
@@ -30,7 +30,7 @@ INSERT INTO providers (
 ) VALUES (
   '95339257-2c37-4bbb-b34b-930083045660', 
   'Belmiro Metais', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Centro', 
@@ -45,7 +45,9 @@ INSERT INTO providers (
   5.0, 
   'manual_google',
   '2026-02-13T15:00:00.000Z'
-) ON CONFLICT (slug) DO UPDATE SET 
+) ON CONFLICT (slug) DO UPDATE SET
+  city_id = EXCLUDED.city_id,
+  category = EXCLUDED.category, 
   name = EXCLUDED.name,
   phone = EXCLUDED.phone,
   whatsapp = EXCLUDED.whatsapp,
@@ -63,7 +65,7 @@ INSERT INTO providers (
 ) VALUES (
   '96f95225-774a-4a5b-a0f8-66a34ee7c2b6', 
   'Serralheria Francis', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Santana', 
@@ -96,7 +98,7 @@ INSERT INTO providers (
 ) VALUES (
   '8832118d-4329-43cb-b6cb-f482591bcd09', 
   'Serralheria.com', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Centro', 
@@ -129,7 +131,7 @@ INSERT INTO providers (
 ) VALUES (
   '8a8c2b75-e1f2-4b34-bb4c-4a01d85dee18', 
   'Serralheria Lima', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Centro', 
@@ -162,7 +164,7 @@ INSERT INTO providers (
 ) VALUES (
   '910c8024-a8c7-445a-93f5-eef8f5c70b00', 
   'Serralheria Caçula', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Centro', 
@@ -195,7 +197,7 @@ INSERT INTO providers (
 ) VALUES (
   '4cb0cb6f-2aeb-40b9-ace0-c6aa38e0cc72', 
   'Cotal Indústria Mecânica Serralheria', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Jardim São Francisco', 
@@ -228,7 +230,7 @@ INSERT INTO providers (
 ) VALUES (
   'a3d7acd2-93b0-4834-9f34-569842f164b1', 
   'Serralheria Vale do Aço', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Santa Luzia', 
@@ -261,7 +263,7 @@ INSERT INTO providers (
 ) VALUES (
   '56a47025-b152-4913-ad50-59a9f8b8d927', 
   'Serralheria São José', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Santa Luzia', 
@@ -294,7 +296,7 @@ INSERT INTO providers (
 ) VALUES (
   '32875096-0081-4234-a261-03148e11ef4f', 
   'O Serralheiro', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Centro Alto', 
@@ -327,7 +329,7 @@ INSERT INTO providers (
 ) VALUES (
   'b7b46251-ff13-44db-a6f0-fd6f052c0ab0', 
   'Sandreaço', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Vila Moderna', 
@@ -360,7 +362,7 @@ INSERT INTO providers (
 ) VALUES (
   '0842eddc-bb7a-46e9-988e-18e4988c29d9', 
   'Ouro Fino', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Ouro Fino Paulista', 
@@ -393,7 +395,7 @@ INSERT INTO providers (
 ) VALUES (
   '4333f15a-907a-4257-9149-e8333cbd4f40', 
   'Serralheria Ouro Fino', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Ouro Fino Paulista', 
@@ -426,7 +428,7 @@ INSERT INTO providers (
 ) VALUES (
   '0c9632ee-1a41-49c5-b23f-2a7f330f1c79', 
   'Serralheria ABC Ribeirão Pires', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Vila Suissa', 
@@ -459,7 +461,7 @@ INSERT INTO providers (
 ) VALUES (
   'bf94fa00-8009-4337-8ef9-71c7d4ccb430', 
   'Estruturas Metálicas Ribeirão', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'serralheiro' OR name ILIKE '%Serralher%' LIMIT 1), 
   'serralheiro', 
   'Ouro Fino', 

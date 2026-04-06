@@ -124,7 +124,7 @@ export function Results() {
       
       setChatSentIds(prev => [...new Set([...prev, ...selectedProviders])])
       
-      alert('Mensagem enviada com sucesso para as empresas selecionadas!')
+      navigate('/inbox?success=1')
     } catch (error) {
        console.error(error)
        alert('Erro ao enviar mensagens. Tente novamente.')

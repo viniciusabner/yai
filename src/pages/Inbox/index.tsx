@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { ArrowLeft, MessageSquare } from 'lucide-react'
+import { useNavigate, useSearchParams } from 'react-router-dom'
+import { ArrowLeft, MessageSquare, CheckCircle, X } from 'lucide-react'
 import { supabase } from '../../services/supabase'
 import { getConversations, getMessages, sendMessage, subscribeToMessages, markAsRead, type Conversation, type Message } from '../../services/messaging.service'
 import { ConversationItem } from '../../components/Inbox/ConversationItem'
@@ -14,6 +14,13 @@ export function Inbox() {
   const [conversations, setConversations] = useState<Conversation[]>([])
   const [selectedId, setSelectedId] = useState<string | null>(null)
   const [messages, setMessages] = useState<Message[]>([])
+  
+  const [searchParams, setSearchParams] = useSearchParams()
+  const showSuccess = searchParams.get('success') === '1'
+  const closeSuccessBanner = () => {
+    searchParams.delete('success')
+    setSearchParams(searchParams)
+  }
 
   // Polling for reliability
   useMessagePoller(selectedId, (fetchedMessages) => {
@@ -105,7 +112,34 @@ export function Inbox() {
   const selectedConversation = conversations.find(c => c.id === selectedId)
 
   return (
-    <div className="flex h-[calc(100vh-64px)] overflow-hidden bg-white dark:bg-gray-950">
+    <div className="flex h-[calc(100vh-64px)] overflow-hidden bg-white dark:bg-gray-950 relative">
+      {/* Success Modal */}
+      {showSuccess && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl max-w-sm w-full p-6 text-center animate-in fade-in zoom-in-95 duration-200 relative">
+            <button 
+              onClick={closeSuccessBanner}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            <div className="mx-auto w-12 h-12 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-4">
+              <CheckCircle className="h-6 w-6" />
+            </div>
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Mensagem Enviada!</h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
+              Mensagem enviada com sucesso para as empresas selecionadas! Em breve, você terá retorno.
+            </p>
+            <button
+              onClick={closeSuccessBanner}
+              className="mt-6 w-full py-2 bg-brand-blue text-white font-medium rounded-xl hover:bg-brand-blue/90 transition-colors"
+            >
+              Entendi
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Sidebar List (Visible on mobile if no chat selected, always on desktop) */}
       <div className={`
         w-full md:w-80 lg:w-96 border-r border-gray-200 dark:border-gray-800 flex flex-col bg-white dark:bg-gray-900

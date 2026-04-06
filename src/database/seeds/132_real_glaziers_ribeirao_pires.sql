@@ -6,19 +6,19 @@
 DELETE FROM contact_events
 WHERE provider_id IN (
   SELECT id FROM providers 
-  WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'vidraceiro')
+  WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'vidraceiro')
   OR slug LIKE '%-ribeirao-pires' AND category = 'vidraceiro'
 );
 
 DELETE FROM conversations
 WHERE provider_id IN (
   SELECT id FROM providers 
-  WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'vidraceiro')
+  WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'vidraceiro')
   OR slug LIKE '%-ribeirao-pires' AND category = 'vidraceiro'
 );
 
 DELETE FROM providers 
-WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'vidraceiro')
+WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'vidraceiro')
 OR slug LIKE '%-ribeirao-pires' AND category = 'vidraceiro';
 
 
@@ -30,7 +30,7 @@ INSERT INTO providers (
 ) VALUES (
   '9367e280-35fa-42e7-b7aa-7628c58ff26d', 
   'M & S Vidros', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'vidraceiro' OR name ILIKE '%Vidraceiro%' LIMIT 1), 
   'vidraceiro', 
   'Centro', 
@@ -45,7 +45,9 @@ INSERT INTO providers (
   5.0, 
   'manual_google',
   '2026-02-13T15:00:00.000Z'
-) ON CONFLICT (slug) DO UPDATE SET 
+) ON CONFLICT (slug) DO UPDATE SET
+  city_id = EXCLUDED.city_id,
+  category = EXCLUDED.category, 
   name = EXCLUDED.name,
   phone = EXCLUDED.phone,
   whatsapp = EXCLUDED.whatsapp,
@@ -63,7 +65,7 @@ INSERT INTO providers (
 ) VALUES (
   '043d63bf-bf8e-45ba-a43a-bf005e678c28', 
   'Top Glass Sacadas', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'vidraceiro' OR name ILIKE '%Vidraceiro%' LIMIT 1), 
   'vidraceiro', 
   'Jardim Roncon', 
@@ -96,7 +98,7 @@ INSERT INTO providers (
 ) VALUES (
   '5dd5b840-8600-4c31-a7e0-a8a42e295021', 
   'Orient Vidros', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'vidraceiro' OR name ILIKE '%Vidraceiro%' LIMIT 1), 
   'vidraceiro', 
   'Centro', 
@@ -129,7 +131,7 @@ INSERT INTO providers (
 ) VALUES (
   '88ba6e78-db66-494b-9e67-9bc927ae3d5c', 
   'Vidraçaria SP Box Ribeirão', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'vidraceiro' OR name ILIKE '%Vidraceiro%' LIMIT 1), 
   'vidraceiro', 
   'Centro', 
@@ -162,7 +164,7 @@ INSERT INTO providers (
 ) VALUES (
   'a263689b-17a3-4f9c-8514-ed7f7112879d', 
   'Design Plano Vidraçaria Ribeirão', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'vidraceiro' OR name ILIKE '%Vidraceiro%' LIMIT 1), 
   'vidraceiro', 
   'Centro', 
@@ -195,7 +197,7 @@ INSERT INTO providers (
 ) VALUES (
   '81bfcfd7-e138-4aa6-9a95-922457876a03', 
   'Vidraçaria Paiva', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'vidraceiro' OR name ILIKE '%Vidraceiro%' LIMIT 1), 
   'vidraceiro', 
   'Centro', 
@@ -228,7 +230,7 @@ INSERT INTO providers (
 ) VALUES (
   '55c62fcc-d5b2-4c71-aab4-d537b33ded26', 
   'Efraim Vidraçaria Ribeirão', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'vidraceiro' OR name ILIKE '%Vidraceiro%' LIMIT 1), 
   'vidraceiro', 
   'Centro', 
@@ -261,7 +263,7 @@ INSERT INTO providers (
 ) VALUES (
   'd6aaba13-3df1-4e81-80d0-bd55a307ae74', 
   'Beska Vidros e Espelhos', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'vidraceiro' OR name ILIKE '%Vidraceiro%' LIMIT 1), 
   'vidraceiro', 
   'Centro', 
@@ -294,7 +296,7 @@ INSERT INTO providers (
 ) VALUES (
   '18a0c330-ddd5-4a51-9e77-120e55056f52', 
   'Vidraçamento', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'vidraceiro' OR name ILIKE '%Vidraceiro%' LIMIT 1), 
   'vidraceiro', 
   'Centro', 
@@ -327,7 +329,7 @@ INSERT INTO providers (
 ) VALUES (
   '3f276c7d-9a14-4836-99f0-01144f985e93', 
   'SPGlass Ribeirão', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'vidraceiro' OR name ILIKE '%Vidraceiro%' LIMIT 1), 
   'vidraceiro', 
   'Centro', 
@@ -360,7 +362,7 @@ INSERT INTO providers (
 ) VALUES (
   '07e69c2b-b682-4d20-b7f3-a9c86f9571ce', 
   'Vidraçaria Fioravante', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'vidraceiro' OR name ILIKE '%Vidraceiro%' LIMIT 1), 
   'vidraceiro', 
   'Centro', 
@@ -393,7 +395,7 @@ INSERT INTO providers (
 ) VALUES (
   '15f6e45c-04c8-403e-8db6-d9ebcfc5989e', 
   'Lider Envidraçamentos', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'vidraceiro' OR name ILIKE '%Vidraceiro%' LIMIT 1), 
   'vidraceiro', 
   'Centro', 
@@ -426,7 +428,7 @@ INSERT INTO providers (
 ) VALUES (
   '775d513f-338d-4e35-9c26-9bdaed8dd6f0', 
   'Vidraçaria Centro Alto', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'vidraceiro' OR name ILIKE '%Vidraceiro%' LIMIT 1), 
   'vidraceiro', 
   'Centro Alto', 

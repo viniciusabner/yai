@@ -13,7 +13,7 @@ VALUES
     'manual_google', 
     true, 
     'casa-de-baterias-paulista-maua-5a4e25', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -30,7 +30,7 @@ VALUES
     'manual_google', 
     true, 
     'rede-oficina-express-maua-1a9269', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -47,7 +47,7 @@ VALUES
     'manual_google', 
     true, 
     'dimas-auto-eletrico-e-mecanica-geral-maua-099c1a', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -64,7 +64,7 @@ VALUES
     'manual_google', 
     true, 
     'serikawa-auto-eletrico-maua-68cca7', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -81,7 +81,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-jonas-maua-80cc66', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -98,7 +98,7 @@ VALUES
     'manual_google', 
     true, 
     'eletro-tecnica-lins-maua-5db2aa', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -115,7 +115,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-mecanica-matriz-ltda-auto-eletrica-maua-c4270e', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -132,7 +132,7 @@ VALUES
     'manual_google', 
     true, 
     't-nishiyama-servicos-automotivos-maua-c66b37', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -149,7 +149,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-eder-maua-41cf25', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -166,7 +166,7 @@ VALUES
     'manual_google', 
     true, 
     'alento-auto-pecas-e-auto-eletrica-maua-2471ff', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -183,7 +183,7 @@ VALUES
     'manual_google', 
     true, 
     'alento-autoeletrico-geral-maua-e75075', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -200,7 +200,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-anderson-conceicao-maua-eab69d', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -217,7 +217,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrico-m-m-maua-48ea39', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -234,7 +234,7 @@ VALUES
     'manual_google', 
     true, 
     'maua-comercio-de-auto-pecas-eletricas-maua-8ba947', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -251,7 +251,7 @@ VALUES
     'manual_google', 
     true, 
     'noreika-auto-pecas-eletricas-maua-ec7b93', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -268,7 +268,7 @@ VALUES
     'manual_google', 
     true, 
     'dapec-eletrica-maua-aaa7c7', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -285,7 +285,7 @@ VALUES
     'manual_google', 
     true, 
     'tropical-baterias-maua-c6fcc4', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -302,7 +302,7 @@ VALUES
     'manual_google', 
     true, 
     'wa-baterias-delivery-maua-eade1d', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -319,7 +319,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-je-maua-1187a9', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'
@@ -336,7 +336,7 @@ VALUES
     'manual_google', 
     true, 
     'aema-ar-condicionado-eletrica-maua-0dc785', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'maua', 
     'SP'

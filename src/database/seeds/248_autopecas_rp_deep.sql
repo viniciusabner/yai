@@ -156,4 +156,6 @@ VALUES
     'ribeirao-pires', 
     'SP'
   )
-ON CONFLICT (id) DO NOTHING;
+ON CONFLICT (slug) DO UPDATE SET
+  city_id = EXCLUDED.city_id,
+  category = EXCLUDED.category;

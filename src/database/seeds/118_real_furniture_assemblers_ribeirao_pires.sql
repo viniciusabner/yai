@@ -6,19 +6,19 @@
 DELETE FROM contact_events
 WHERE provider_id IN (
   SELECT id FROM providers 
-  WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'montador_moveis')
+  WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'montador_moveis')
   OR slug LIKE '%-ribeirao-pires'
 );
 
 DELETE FROM conversations
 WHERE provider_id IN (
   SELECT id FROM providers 
-  WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'montador_moveis')
+  WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'montador_moveis')
   OR slug LIKE '%-ribeirao-pires'
 );
 
 DELETE FROM providers 
-WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'montador_moveis')
+WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'montador_moveis')
 OR slug LIKE '%-ribeirao-pires';
 
 
@@ -43,7 +43,9 @@ INSERT INTO providers (
   'Serviços de montagem e desmontagem de móveis em Ribeirão Pires (Atendimento Regional)', 
   5.0, 
   'manual_search_verified'
-) ON CONFLICT (slug) DO UPDATE SET 
+) ON CONFLICT (slug) DO UPDATE SET
+  city_id = EXCLUDED.city_id,
+  category = EXCLUDED.category, 
   name = EXCLUDED.name,
   phone = EXCLUDED.phone,
   whatsapp = EXCLUDED.whatsapp,

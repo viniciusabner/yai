@@ -6,19 +6,19 @@
 DELETE FROM contact_events
 WHERE provider_id IN (
   SELECT id FROM providers 
-  WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'tecnico_ar_condicionado')
+  WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'tecnico_ar_condicionado')
   OR slug LIKE '%-ribeirao-pires' AND category = 'tecnico_ar_condicionado'
 );
 
 DELETE FROM conversations
 WHERE provider_id IN (
   SELECT id FROM providers 
-  WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'tecnico_ar_condicionado')
+  WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'tecnico_ar_condicionado')
   OR slug LIKE '%-ribeirao-pires' AND category = 'tecnico_ar_condicionado'
 );
 
 DELETE FROM providers 
-WHERE (city_id = (SELECT id FROM cities WHERE slug = 'ribeirao-pires') AND category = 'tecnico_ar_condicionado')
+WHERE (city_id = '1f84b6c7-69e8-49c6-a691-30da5246e0ea' AND category = 'tecnico_ar_condicionado')
 OR slug LIKE '%-ribeirao-pires' AND category = 'tecnico_ar_condicionado';
 
 
@@ -30,7 +30,7 @@ INSERT INTO providers (
 ) VALUES (
   '8d627eea-1998-4fc9-ba59-cb25e0051249', 
   'WG Ar Condicionado', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'tecnico-ar-condicionado' OR name ILIKE '%Ar Condicionado%' LIMIT 1), 
   'tecnico_ar_condicionado', 
   'Centro', 
@@ -45,7 +45,9 @@ INSERT INTO providers (
   5.0, 
   'manual_google',
   '2026-02-13T15:00:00.000Z'
-) ON CONFLICT (slug) DO UPDATE SET 
+) ON CONFLICT (slug) DO UPDATE SET
+  city_id = EXCLUDED.city_id,
+  category = EXCLUDED.category, 
   name = EXCLUDED.name,
   phone = EXCLUDED.phone,
   whatsapp = EXCLUDED.whatsapp,
@@ -63,7 +65,7 @@ INSERT INTO providers (
 ) VALUES (
   '58fd0744-f60c-41d7-a2b9-4bed8567cced', 
   'Casa do Ar Condicionado', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'tecnico-ar-condicionado' OR name ILIKE '%Ar Condicionado%' LIMIT 1), 
   'tecnico_ar_condicionado', 
   'Centro', 
@@ -96,7 +98,7 @@ INSERT INTO providers (
 ) VALUES (
   '082fc74a-0ec7-45ad-bcb0-8fa3eb8e1417', 
   'Horvath Ar', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'tecnico-ar-condicionado' OR name ILIKE '%Ar Condicionado%' LIMIT 1), 
   'tecnico_ar_condicionado', 
   'Centro', 
@@ -129,7 +131,7 @@ INSERT INTO providers (
 ) VALUES (
   'f4eafe83-325a-4618-8c22-45a0e283af95', 
   'Mr Ar Condicionado', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'tecnico-ar-condicionado' OR name ILIKE '%Ar Condicionado%' LIMIT 1), 
   'tecnico_ar_condicionado', 
   'Centro', 
@@ -162,7 +164,7 @@ INSERT INTO providers (
 ) VALUES (
   '950495ab-5a13-425f-a324-cd6239a4c8d5', 
   'ABC Ar Condicionado', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'tecnico-ar-condicionado' OR name ILIKE '%Ar Condicionado%' LIMIT 1), 
   'tecnico_ar_condicionado', 
   'Centro', 
@@ -195,7 +197,7 @@ INSERT INTO providers (
 ) VALUES (
   'e924d24a-aea8-42e0-a1c7-81dc634b6c5a', 
   'Gelar SP', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'tecnico-ar-condicionado' OR name ILIKE '%Ar Condicionado%' LIMIT 1), 
   'tecnico_ar_condicionado', 
   'Centro', 
@@ -228,7 +230,7 @@ INSERT INTO providers (
 ) VALUES (
   '567b72ec-2d12-44ec-b228-8125fe797b2f', 
   'Manutenção Ar Condicionado Carrier Ribeirão', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'tecnico-ar-condicionado' OR name ILIKE '%Ar Condicionado%' LIMIT 1), 
   'tecnico_ar_condicionado', 
   'Centro', 
@@ -261,7 +263,7 @@ INSERT INTO providers (
 ) VALUES (
   '9ba5138d-8733-481b-a951-9d899bb9a6fd', 
   'M Techar Instalação e Manutenção', 
-  (SELECT id FROM cities WHERE slug = 'ribeirao-pires'), 
+  '1f84b6c7-69e8-49c6-a691-30da5246e0ea', 
   (SELECT id FROM categories WHERE slug = 'tecnico-ar-condicionado' OR name ILIKE '%Ar Condicionado%' LIMIT 1), 
   'tecnico_ar_condicionado', 
   'Centro', 

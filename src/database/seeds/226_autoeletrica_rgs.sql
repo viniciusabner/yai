@@ -13,7 +13,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-toledo-rio-grande-da-serra-50f058', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'rio-grande-da-serra', 
     'SP'
@@ -30,7 +30,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-cido-franco-rio-grande-da-serra-f9d2e7', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'rio-grande-da-serra', 
     'SP'
@@ -47,7 +47,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-eletrica-caracas-rio-grande-da-serra-ecd8b2', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'rio-grande-da-serra', 
     'SP'
@@ -64,7 +64,7 @@ VALUES
     'manual_google', 
     true, 
     'lango-auto-eletrica-rio-grande-da-serra-cdda21', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'rio-grande-da-serra', 
     'SP'
@@ -81,7 +81,7 @@ VALUES
     'manual_google', 
     true, 
     'auto-pecas-esperanca-da-serra-auto-eletrica-rio-grande-da-serra-f9e071', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'rio-grande-da-serra', 
     'SP'
@@ -98,7 +98,7 @@ VALUES
     'manual_google', 
     true, 
     'autopecas-rio-grande-serra-rio-grande-da-serra-2949a0', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'rio-grande-da-serra', 
     'SP'
@@ -115,7 +115,7 @@ VALUES
     'manual_google', 
     true, 
     'cdi-diesel-oficina-rio-grande-da-serra-2bc102', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'rio-grande-da-serra', 
     'SP'
@@ -132,7 +132,7 @@ VALUES
     'manual_google', 
     true, 
     'ailtoncar-auto-center-rio-grande-da-serra-f4b7bb', 
-    'auto-eletrica', 
+    'auto_eletrica', 
     NULL, 
     'rio-grande-da-serra', 
     'SP'
