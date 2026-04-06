@@ -22,7 +22,8 @@ export function Login() {
 
   // ... rest of logic ...
 
-  const from = location.state?.from?.pathname || '/'
+  const stateFrom = location.state?.from
+  const from = (typeof stateFrom === 'string' ? stateFrom : stateFrom?.pathname) || '/'
 
   // ... rest of logic ...
 

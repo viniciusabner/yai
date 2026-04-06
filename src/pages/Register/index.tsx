@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import { signInWithGoogle, signUpWithEmail } from '../../services/auth.service'
 import { Button } from '../../components/Button'
 
 export function Register() {
   const navigate = useNavigate()
+  const location = useLocation()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -45,7 +46,7 @@ export function Register() {
       // Supabase default is "Confirm Email" unless disabled.
       // Assuming auto-login or message:
       alert('Cadastro realizado! Se solicitado, verifique seu email.')
-      navigate('/login')
+      navigate('/login', { state: location.state })
     } catch (err: any) {
       let msg = err.message
       if (msg.includes('Password should be at least 6 characters')) {
