@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation, useSearchParams } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import { WhatsAppIcon } from '../../components/Icons/WhatsAppIcon'
 import { Logo } from '../../components/Logo'
@@ -30,6 +30,22 @@ export function Results() {
   } = useSelectionStore()
   
   const [providers, setProviders] = useState<Provider[]>([])
+  const [searchParams, setSearchParams] = useSearchParams()
+  
+  // Auto-send logic after login
+  useEffect(() => {
+    const autoSend = searchParams.get('autoSend')
+    if (autoSend === 'true') {
+      const newSearchParams = new URLSearchParams(searchParams)
+      newSearchParams.delete('autoSend')
+      setSearchParams(newSearchParams, { replace: true })
+      
+      if (customMessage.trim().length > 0 && selectedProviders.length > 0) {
+         handleBulkChat()
+      }
+    }
+  }, [searchParams, customMessage, selectedProviders])
+
   const [loading, setLoading] = useState(true)
   const [cityNames, setCityNames] = useState<string[]>([])
   const [cityMap, setCityMap] = useState<Record<string, string>>({})
@@ -431,8 +447,8 @@ export function Results() {
            setShowLoginModal(false)
            navigate('/login', { 
              state: { 
-               from: location.pathname + location.search,
-               message: 'Para ter uma melhor experiência, crie sua conta ou faça login.' 
+               from: location.pathname + location.search + (location.search ? '&' : '?') + 'autoSend=true',
+               message: 'Faça login ou crie sua conta para enviar a mensagem aos prestadores.' 
              } 
            })
         }}
