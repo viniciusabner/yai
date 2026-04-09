@@ -2,10 +2,22 @@ import { supabase } from './supabase'
 import { getSessionId } from '../utils/session'
 
 export async function signInWithGoogle(redirectTo?: string) {
-  const finalRedirect = redirectTo
-    ? `${window.location.origin}${redirectTo}`
-    // @ts-ignore
-    : `${window.location.origin}${import.meta.env.BASE_URL}`;
+  // @ts-ignore
+  const baseRoute = import.meta.env.BASE_URL || '/';
+  
+  let finalPath = '';
+  if (redirectTo) {
+      if (baseRoute !== '/' && !redirectTo.startsWith(baseRoute)) {
+          const cleanRedirect = redirectTo.startsWith('/') ? redirectTo.substring(1) : redirectTo;
+          finalPath = `${baseRoute}${cleanRedirect}`;
+      } else {
+          finalPath = redirectTo;
+      }
+  } else {
+      finalPath = baseRoute;
+  }
+
+  const finalRedirect = `${window.location.origin}${finalPath}`;
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
