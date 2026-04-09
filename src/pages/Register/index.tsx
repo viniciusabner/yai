@@ -18,7 +18,9 @@ export function Register() {
   const handleGoogleLogin = async () => {
     try {
       setLoading(true)
-      await signInWithGoogle()
+      const stateFrom = location.state?.from
+      const from = (typeof stateFrom === 'string' ? stateFrom : stateFrom?.pathname) || '/'
+      await signInWithGoogle(from)
     } catch (err: any) {
       setError(err.message)
       setLoading(false)

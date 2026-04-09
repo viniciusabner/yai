@@ -30,7 +30,7 @@ export function Login() {
   const handleGoogleLogin = async () => {
     try {
       setLoading(true)
-      await signInWithGoogle()
+      await signInWithGoogle(from)
       navigate(from, { replace: true })
     } catch (err: any) {
       setError(err.message)

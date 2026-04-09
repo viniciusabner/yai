@@ -1,11 +1,16 @@
 import { supabase } from './supabase'
 import { getSessionId } from '../utils/session'
 
-export async function signInWithGoogle() {
+export async function signInWithGoogle(redirectTo?: string) {
+  const finalRedirect = redirectTo
+    ? `${window.location.origin}${redirectTo}`
+    // @ts-ignore
+    : `${window.location.origin}${import.meta.env.BASE_URL}`;
+
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
     options: {
-      redirectTo: `${window.location.origin}${import.meta.env.BASE_URL}`, // Redirect back to app root
+      redirectTo: finalRedirect,
     },
   })
   if (error) throw error
