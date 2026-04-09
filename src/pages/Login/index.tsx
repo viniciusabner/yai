@@ -68,7 +68,7 @@ export function Login() {
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
           Ou{' '}
-          <Link to="/register" className="font-medium text-green-600 hover:text-green-500 dark:text-green-500 dark:hover:text-green-400">
+          <Link to="/register" state={location.state} className="font-medium text-green-600 hover:text-green-500 dark:text-green-500 dark:hover:text-green-400">
             crie uma nova conta
           </Link>
         </p>

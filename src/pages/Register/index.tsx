@@ -77,7 +77,7 @@ export function Register() {
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
           Já tem uma conta?{' '}
-          <Link to="/login" className="font-medium text-green-600 hover:text-green-500 dark:text-green-500 dark:hover:text-green-400">
+          <Link to="/login" state={location.state} className="font-medium text-green-600 hover:text-green-500 dark:text-green-500 dark:hover:text-green-400">
             Fazer login
           </Link>
         </p>

@@ -444,6 +444,7 @@ export function Results() {
         isOpen={showLoginModal} 
         onClose={() => setShowLoginModal(false)}
         onLogin={() => {
+           localStorage.setItem('yai-redirect-after-login', location.pathname + location.search + (location.search ? '&' : '?') + 'autoSend=true')
            setShowLoginModal(false)
            navigate('/login', { 
              state: { 
