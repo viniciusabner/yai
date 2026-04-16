@@ -7,11 +7,13 @@ interface SelectionState {
   macroSegment: MacroSegment
   setMacroSegment: (segment: MacroSegment) => void
   selectedCities: string[]
+  setCities: (cityIds: string[]) => void
   selectedCategory: string | null
   selectedProviders: string[]
   isCityModalOpen: boolean
   isProfileModalOpen: boolean
   customMessage: string
+  pendingProviderClaim: { id: string; name: string; category: string } | null
   toggleCity: (cityId: string) => void
   setSelectedCategory: (category: string | null) => void
   setCustomMessage: (message: string) => void
@@ -23,6 +25,7 @@ interface SelectionState {
   selectProviders: (providers: string[]) => void
   clearSelection: () => void
   clearCities: () => void
+  setPendingProviderClaim: (claim: { id: string; name: string; category: string } | null) => void
 }
 
 export const useSelectionStore = create<SelectionState>()(
@@ -35,8 +38,10 @@ export const useSelectionStore = create<SelectionState>()(
       isCityModalOpen: false,
       isProfileModalOpen: false,
       customMessage: '',
+      pendingProviderClaim: null,
 
       setMacroSegment: (segment) => set({ macroSegment: segment }),
+      setPendingProviderClaim: (claim) => set({ pendingProviderClaim: claim }),
 
       toggleCity: (id) =>
         set((state) => {
@@ -48,6 +53,8 @@ export const useSelectionStore = create<SelectionState>()(
           }
         }),
         
+      setCities: (ids) => set({ selectedCities: ids }),
+
       clearCities: () => set({ selectedCities: [] }),
 
       setSelectedCategory: (category) => set((state) => {

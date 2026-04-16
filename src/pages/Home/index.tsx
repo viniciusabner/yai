@@ -9,6 +9,7 @@ import { useSelectionStore } from '../../store/useSelectionStore'
 import { mergeAnonymousHistory } from '../../services/auth.service'
 import { CATEGORIES } from '../../constants/categories'
 import { supabase } from '../../services/supabase'
+import { getMyProviders } from '../../services/providers.service'
 
 export function Home() {
   const navigate = useNavigate()
@@ -16,10 +17,20 @@ export function Home() {
   const [searchTerm, setSearchTerm] = useState('')
   const [pendingCategory, setPendingCategory] = useState<string | null>(null)
   const [isLogged, setIsLogged] = useState<boolean | null>(null)
+  const [isProvider, setIsProvider] = useState<boolean>(false)
+  const pendingProviderClaim = useSelectionStore((s) => s.pendingProviderClaim)
 
   useEffect(() => {
     mergeAnonymousHistory()
-    supabase.auth.getUser().then(({ data }) => setIsLogged(!!data.user))
+    supabase.auth.getUser().then(({ data }) => {
+      const logged = !!data.user
+      setIsLogged(logged)
+      if (logged) {
+        getMyProviders().then(providers => {
+          setIsProvider(providers.length > 0)
+        })
+      }
+    })
   }, [])
 
   useEffect(() => {
@@ -93,10 +104,17 @@ export function Home() {
       </div> */}
 
       {/* Recrutamento de Profissionais CTA */}
-      {isLogged !== true && (
+      {(!isLogged || (isLogged && isProvider && pendingProviderClaim)) && (
         <div className="mt-4 px-6 max-w-7xl mx-auto">
           <div 
-            onClick={() => navigate('/para-profissionais')}
+            onClick={() => {
+              if (isLogged) {
+                if (isProvider) navigate('/provider')
+                else navigate('/register-company')
+              } else {
+                navigate('/para-profissionais')
+              }
+            }}
             className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-3xl p-5 shadow-lg relative overflow-hidden cursor-pointer group hover:shadow-xl transition-all"
           >
             {/* Fundo abstrato/Glow */}

@@ -17,6 +17,8 @@ interface ProviderListProps {
 export function ProviderList({ providers, loading, cityName, cityMap, customMessage, chatSentIds = [], onLoginRequest, onChatAction, onProfileClick }: ProviderListProps) {
   const { selectedProviders, toggleProvider } = useSelectionStore()
 
+  console.log('providers', providers)
+
   if (loading) {
     return (
       <div className="space-y-4">

@@ -33,34 +33,34 @@ export interface Provider {
 
 // Re-writing with ID to be safer
 export async function getProvidersByCityIds(cityIds: string[], category?: string | null) {
-    if (!cityIds || cityIds.length === 0) return [];
+  if (!cityIds || cityIds.length === 0) return [];
 
-    // `cityIds` received from `CitySelectionModal` are already UUIDs from the 'cities' table.
-    let query = publicSupabase.from('providers').select('*').in('city_id', cityIds)
-    
-    if (category) {
-      query = query.eq('category', category)
-    }
-    
-    const { data: providers, error: providersError } = await query
-    if (providersError) throw providersError
+  // `cityIds` received from `CitySelectionModal` are already UUIDs from the 'cities' table.
+  let query = publicSupabase.from('providers').select('*').in('city_id', cityIds)
+
+  if (category) {
+    query = query.eq('category', category)
+  }
+
+  const { data: providers, error: providersError } = await query
+  if (providersError) throw providersError
 
 
-    // 2. Fetch my confirmed events
-    const sessionId = getSessionId()
-    const { data: myEvents } = await supabase
-      .from('contact_events')
-      .select('provider_id')
-      .eq('session_id', sessionId)
-      .eq('event_type', 'whatsapp_confirmed')
+  // 2. Fetch my confirmed events
+  const sessionId = getSessionId()
+  const { data: myEvents } = await supabase
+    .from('contact_events')
+    .select('provider_id')
+    .eq('session_id', sessionId)
+    .eq('event_type', 'whatsapp_confirmed')
 
-    const confirmedProviderIds = new Set(myEvents?.map(e => e.provider_id) || [])
+  const confirmedProviderIds = new Set(myEvents?.map(e => e.provider_id) || [])
 
-    // 3. Merge
-    return providers.map(p => ({
-      ...p,
-      confirmed: confirmedProviderIds.has(p.id)
-    })) as Provider[]
+  // 3. Merge
+  return providers.map(p => ({
+    ...p,
+    confirmed: confirmedProviderIds.has(p.id)
+  })) as Provider[]
 }
 
 export async function logContactEvent(providerId: string, eventType: 'whatsapp_click' | 'whatsapp_confirmed') {
@@ -79,7 +79,8 @@ export async function logContactEvent(providerId: string, eventType: 'whatsapp_c
 }
 
 export async function claimProvider(providerId: string) {
-  const { data: { user } } = await supabase.auth.getUser()
+  const { data: { session } } = await supabase.auth.getSession()
+  const user = session?.user
   if (!user) throw new Error('User not authenticated')
 
   const { error } = await supabase
@@ -93,13 +94,100 @@ export async function claimProvider(providerId: string) {
 }
 
 export async function getMyProviders() {
-  const { data: { user } } = await supabase.auth.getUser()
+  const { data: { session } } = await supabase.auth.getSession()
+  const user = session?.user
   if (!user) return []
 
   const { data } = await supabase
     .from('providers')
     .select('*')
     .eq('owner_id', user.id)
-  
+
   return data as Provider[]
+}
+
+/**
+ * Checks if a phone number already exists in the providers table.
+ * Returns the provider id and name if found, or null.
+ */
+export async function checkPhoneExists(phone: string): Promise<{ id: string; name: string } | null> {
+  const cleaned = phone.replace(/\D/g, '')
+  const { data } = await supabase
+    .from('providers')
+    .select('id, name')
+    .or(`phone.eq.${cleaned},whatsapp.eq.${cleaned}`)
+    .limit(1)
+    .maybeSingle()
+  return data as { id: string; name: string } | null
+}
+
+/**
+ * Checks if an email already exists in the providers table.
+ * Returns the provider id and name if found, or null.
+ */
+export async function checkEmailExists(email: string): Promise<{ id: string; name: string } | null> {
+  const { data } = await supabase
+    .from('providers')
+    .select('id, name')
+    .eq('email', email)
+    .limit(1)
+    .maybeSingle()
+  return data as { id: string; name: string } | null
+}
+
+export interface CreateProviderInput {
+  name: string
+  category: string
+  city_slug: string
+  phone: string
+  email: string
+  neighborhood?: string
+  address?: string
+  description?: string
+  website?: string
+}
+
+/**
+ * Creates a new provider profile owned by the current user.
+ */
+export async function createProvider(input: CreateProviderInput): Promise<string> {
+  const { data: { session } } = await supabase.auth.getSession()
+  const user = session?.user
+  if (!user) throw new Error('User not authenticated')
+
+  const slug = `${input.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${input.city_slug}-${Date.now()}`
+
+  const { data: cityData } = await supabase
+    .from('cities')
+    .select('id')
+    .eq('slug', input.city_slug)
+    .single()
+
+  if (!cityData) throw new Error('City not found')
+
+  const { data, error } = await supabase
+    .from('providers')
+    .insert({
+      name: input.name,
+      category: input.category,
+      city_id: cityData.id,
+      city_slug: input.city_slug,
+      phone: input.phone,
+      email: input.email,
+      neighborhood: input.neighborhood || '',
+      address: input.address || '',
+      description: input.description || '',
+      website: input.website || '',
+      slug,
+      owner_id: user.id,
+      confirmed: true,
+      active: true,
+      source: 'self_registered',
+      state: 'SP'
+    })
+    .select('id')
+    .single()
+
+  if (error) throw error
+  return data.id
 }

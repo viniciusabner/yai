@@ -27,7 +27,8 @@ export interface Message {
 }
 
 export async function getConversations() {
-  const { data: { user } } = await supabase.auth.getUser()
+  const { data: { session } } = await supabase.auth.getSession()
+  const user = session?.user
   if (!user) throw new Error('User not authenticated')
 
   const { data, error } = await supabase
@@ -110,7 +111,8 @@ export async function getMessages(conversationId: string) {
 }
 
 export async function sendMessage(conversationId: string, content: string) {
-  const { data: { user } } = await supabase.auth.getUser()
+  const { data: { session } } = await supabase.auth.getSession()
+  const user = session?.user
   if (!user) throw new Error('User not authenticated')
 
   const { data, error } = await supabase
@@ -128,7 +130,8 @@ export async function sendMessage(conversationId: string, content: string) {
 }
 
 export async function startConversation(providerId: string, initialMessage: string) {
-  const { data: { user } } = await supabase.auth.getUser()
+  const { data: { session } } = await supabase.auth.getSession()
+  const user = session?.user
   if (!user) throw new Error('User not authenticated')
 
   // 1. Check if conversation exists
@@ -181,7 +184,8 @@ export function subscribeToMessages(conversationId: string, onNewMessage: (msg: 
 }
 
 export async function sendMessageToProviders(providerIds: string[], content: string) {
-  const { data: { user } } = await supabase.auth.getUser()
+  const { data: { session } } = await supabase.auth.getSession()
+  const user = session?.user
   if (!user) throw new Error('User not authenticated')
 
   // We can initiate all conversations in parallel
@@ -194,7 +198,8 @@ export async function sendMessageToProviders(providerIds: string[], content: str
 }
 
 export async function getUnreadCount() {
-  const { data: { user } } = await supabase.auth.getUser()
+  const { data: { session } } = await supabase.auth.getSession()
+  const user = session?.user
   if (!user) return 0
 
   const { count, error } = await supabase
@@ -211,7 +216,8 @@ export async function getUnreadCount() {
 }
 
 export async function markAsRead(conversationId: string) {
-  const { data: { user } } = await supabase.auth.getUser()
+  const { data: { session } } = await supabase.auth.getSession()
+  const user = session?.user
   if (!user) return
 
   const { error } = await supabase

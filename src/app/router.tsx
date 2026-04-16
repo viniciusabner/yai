@@ -3,6 +3,7 @@ import { Home } from '../pages/Home'
 import { Results } from '../pages/Results'
 import { Login } from '../pages/Login'
 import { Register } from '../pages/Register'
+import { RegisterCompany } from '../pages/RegisterCompany'
 import { Inbox } from '../pages/Inbox'
 import { ProviderInbox as ProviderAction } from '../pages/Provider'
 import { Layout } from '../components/Layout'
@@ -108,6 +109,10 @@ const router = createBrowserRouter([
   {
     path: '/register',
     element: <Register />,
+  },
+  {
+    path: '/register-company',
+    element: <RegisterCompany />,
   },
   {
     path: '/forgot-password',

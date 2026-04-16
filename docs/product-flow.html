@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yai — Fluxo de Produto</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 32px 24px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 8px;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      text-align: center;
+      color: #94a3b8;
+      margin-bottom: 48px;
+      font-size: 14px;
+    }
+    .flow-section {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 32px;
+    }
+    .flow-section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #334155;
+    }
+    .flow-section .mermaid {
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+    }
+    .legend {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 32px;
+    }
+    .legend h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #334155;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th { background: #0f172a; padding: 10px 14px; text-align: left; color: #94a3b8; }
+    td { padding: 10px 14px; border-top: 1px solid #1e293b; }
+    tr:nth-child(even) td { background: #0f172a22; }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .done { background: #14532d; color: #4ade80; }
+    .partial { background: #1c3d6f; color: #60a5fa; }
+    .pending { background: #3f2c00; color: #fbbf24; }
+  </style>
+</head>
+<body>
+
+<h1>Yai — Fluxo de Produto</h1>
+<p class="subtitle">Visão Product Owner · Todos os cenários · 🔜 = ainda não implementado</p>
+
+<div class="flow-section">
+  <h2>👤 Fluxo 1 — Usuário Buscando um Serviço</h2>
+  <div class="mermaid">
+flowchart TD
+    U1([Usuário abre o Yai]) --> U2{Sabe o que quer?}
+    U2 -- Sim --> U3[Seleciona a categoria]
+    U2 -- Não --> U4[🔜 Navega por destaques ou categorias em alta]
+    U4 --> U3
+    U3 --> U5[Escolhe a cidade]
+    U5 --> U6[Vê lista de prestadores]
+    U6 --> U7{Encontrou?}
+    U7 -- Não --> U8[🔜 Refina filtros: nota, distância, horário]
+    U8 --> U6
+    U7 -- Sim --> U9{Como quer contatar?}
+    U9 -- WhatsApp --> U10([Abre chat direto ✔])
+    U9 -- Mensagem pela plataforma --> U11[Digita mensagem e envia]
+    U11 --> U12{Está logado?}
+    U12 -- Não --> U13[Tela de Login]
+    U13 --> U14([Retorna e envia automaticamente ✔])
+    U12 -- Sim --> U14
+    U14 --> U15([Aguarda resposta no Inbox ✔])
+    U9 -- 🔜 Ligar --> U16([Ligação direta])
+    U9 -- 🔜 Ver perfil completo --> U17([Avaliações e portfólio])
+  </div>
+</div>
+
+<div class="flow-section">
+  <h2>🆕 Fluxo 2 — Usuário se Cadastrando</h2>
+  <div class="mermaid">
+flowchart TD
+    C1([Clica em Criar Conta]) --> C2{Método}
+    C2 -- Google --> C3([Logado instantaneamente ✔])
+    C2 -- E-mail e Senha --> C4[Preenche nome, e-mail e senha]
+    C4 --> C5{E-mail já existe?}
+    C5 -- Sim --> C6([Sugestão de recuperar senha])
+    C5 -- Não --> C7([Conta criada ✔])
+    C3 --> C8
+    C7 --> C8[🔜 Onboarding: sou cliente ou prestador?]
+    C8 --> C9{Escolha}
+    C9 -- Cliente --> C10([Vai para a busca])
+    C9 -- Prestador --> C11([🔜 Fluxo 5 — Cadastro de Empresa])
+  </div>
+</div>
+
+<div class="flow-section">
+  <h2>✉️ Fluxo 3 — Prestador Não Cadastrado Recebe Lead</h2>
+  <div class="mermaid">
+flowchart TD
+    P1([Recebe e-mail: cliente quer te contatar!]) --> P2{Abre o e-mail?}
+    P2 -- Sim --> P3[Lê a mensagem do cliente]
+    P3 --> P4{Quer responder?}
+    P4 -- Sim --> P5[Clica em Quero Responder]
+    P5 --> P6[Cria conta no Yai]
+    P6 --> P7[Herda perfil existente automaticamente]
+    P7 --> P8([Responde no Inbox ✔])
+    P4 -- Não --> P9([Lead ignorado])
+    P2 -- Não --> P10{Passou 24h?}
+    P10 -- Sim --> P11{Tem WhatsApp?}
+    P11 -- Sim --> P12([Mensagem no WhatsApp com mesmo link])
+    P12 --> P2
+    P11 -- Não --> P13([🔜 Equipe Yai contata manualmente])
+    P10 -- Não --> P14([Aguardando...])
+  </div>
+</div>
+
+<div class="flow-section">
+  <h2>✅ Fluxo 4 — Prestador Já Cadastrado Recebe Lead</h2>
+  <div class="mermaid">
+flowchart TD
+    R1([Recebe e-mail: nova mensagem!]) --> R2{Abre?}
+    R2 -- Sim --> R3[Clica em Ver Mensagem]
+    R3 --> R4[Entra no Inbox]
+    R4 --> R5{Quer responder?}
+    R5 -- Sim --> R6([Responde → conversa começa ✔])
+    R5 -- Não agora --> R7([🔜 Notificação push de lembrete])
+    R2 -- Não --> R7
+    R7 --> R4
+  </div>
+</div>
+
+<div class="flow-section">
+  <h2>🏢 Fluxo 5 — Prestador Cadastrando sua Empresa (🔜 Não implementado)</h2>
+  <div class="mermaid">
+flowchart TD
+    E1([Clica em Sou Profissional]) --> E2[Cria conta ou faz login]
+    E2 --> E3{Já tem empresa no Yai?}
+    E3 -- Sim --> E4([Confirma e herda o perfil ✔])
+    E3 -- Não --> E5[Preenche dados da empresa]
+    E5 --> E6[Nome, categoria, cidade, telefone, e-mail]
+    E6 --> E7[🔜 Envia foto ou logo]
+    E7 --> E8[🔜 Aguarda validação]
+    E8 --> E9([Perfil publicado e visível ✔])
+    E4 --> E9
+  </div>
+</div>
+
+<div class="flow-section">
+  <h2>⭐ Fluxo 6 — Avaliação após Serviço (🔜 Não implementado)</h2>
+  <div class="mermaid">
+flowchart TD
+    AV1([Usuário contratou um serviço]) --> AV2[🔜 Recebe pedido de avaliação]
+    AV2 --> AV3{Quer avaliar?}
+    AV3 -- Sim --> AV4[Dá nota de 1 a 5 estrelas]
+    AV4 --> AV5[🔜 Deixa comentário]
+    AV5 --> AV6([Avaliação publicada no perfil ✔])
+    AV3 -- Não --> AV7([Lembrete enviado uma vez em 3 dias])
+  </div>
+</div>
+
+<div class="flow-section">
+  <h2>🛠️ Fluxo 7 — Prestador Gerenciando seu Perfil (🔜 Não implementado)</h2>
+  <div class="mermaid">
+flowchart TD
+    G1([Acessa sua Dashboard]) --> G2[Vê leads recebidos]
+    G2 --> G3[🔜 Edita nome, telefone, e-mail, descrição]
+    G3 --> G4[🔜 Adiciona fotos do trabalho]
+    G4 --> G5[🔜 Configura horários de atendimento]
+    G5 --> G6[🔜 Pausa o perfil temporariamente]
+    G6 --> G7([Perfil sempre atualizado para os clientes ✔])
+  </div>
+</div>
+
+<div class="legend">
+  <h2>📋 Status de todos os Cenários</h2>
+  <table>
+    <tr>
+      <th>#</th><th>Fluxo</th><th>Status</th>
+    </tr>
+    <tr><td>1</td><td>Usuário busca e envia mensagem</td><td><span class="badge done">✅ Implementado</span></td></tr>
+    <tr><td>2</td><td>Usuário se cadastra (sem onboarding guiado)</td><td><span class="badge partial">🔧 Parcial</span></td></tr>
+    <tr><td>3</td><td>Prestador não cadastrado recebe Lead (e-mail ✅, WhatsApp 🔜)</td><td><span class="badge partial">🔧 Parcial</span></td></tr>
+    <tr><td>4</td><td>Prestador cadastrado recebe Lead</td><td><span class="badge done">✅ Implementado</span></td></tr>
+    <tr><td>5</td><td>Prestador se cadastra e cria empresa do zero</td><td><span class="badge pending">🔜 Pendente</span></td></tr>
+    <tr><td>6</td><td>Avaliação pós-serviço</td><td><span class="badge pending">🔜 Pendente</span></td></tr>
+    <tr><td>7</td><td>Dashboard do Prestador (editar, pausar, fotos)</td><td><span class="badge pending">🔜 Pendente</span></td></tr>
+    <tr><td>8</td><td>Filtros avançados de busca (nota, distância, horário)</td><td><span class="badge pending">🔜 Pendente</span></td></tr>
+    <tr><td>9</td><td>Notificações push e lembretes para prestadores</td><td><span class="badge pending">🔜 Pendente</span></td></tr>
+    <tr><td>10</td><td>Ligação direta pelo app</td><td><span class="badge pending">🔜 Pendente</span></td></tr>
+  </table>
+</div>
+
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    themeVariables: {
+      primaryColor: '#1e40af',
+      primaryTextColor: '#e2e8f0',
+      primaryBorderColor: '#3b82f6',
+      lineColor: '#64748b',
+      secondaryColor: '#0f172a',
+      tertiaryColor: '#1e293b'
+    }
+  });
+</script>
+</body>
+</html>
