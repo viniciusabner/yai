@@ -48,9 +48,11 @@ using (
 -- Hard to prove ownership of session_id in SQL without sending it. 
 -- Simple approach: "Allow updating where session_id is X" (client logic).
 
+-- For "merging", we only allow authenticated users to update rows 
+-- where user_id is null (unclaimed) AND they are setting their own uid.
 create policy "Allow update for merge"
 on public.contact_events
 for update
-using (true) -- Temporarily permissive for the merge logic to work from client side
-with check (true);
+using (auth.uid() is not null AND user_id is null)
+with check (user_id = auth.uid());
 

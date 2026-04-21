@@ -125,9 +125,11 @@ export function ProviderInbox() {
             <p className="text-gray-500 mb-6">
                 Você ainda não possui nenhuma empresa vinculada a esta conta.
             </p>
+            {/* Dica de Teste (DESATIVADO)
             <p className="text-sm bg-yellow-50 p-4 rounded text-yellow-800 border border-yellow-200">
                 Dica de Teste: Vá na busca, encontre um card e clique no botão secreto "Dev: Dono" (aparece ao passar o mouse) para virar dono daquela empresa.
             </p>
+            */}
             <button onClick={() => navigate('/results')} className="mt-4 text-blue-600 underline">
                 Voltar para a busca
             </button>
