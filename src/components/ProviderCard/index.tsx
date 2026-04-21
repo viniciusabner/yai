@@ -81,19 +81,11 @@ export function ProviderCard({ provider, selected, onToggle, customMessage, chat
     logContactEvent(provider.id, 'whatsapp_click') 
   }
 
+  /*
   const handleClaim = async (e: React.MouseEvent) => {
      e.stopPropagation()
      try {
-       // Need to import claimProvider. 
-       // I'll add the import in a separate step or just assume it is there? 
-       // Better to do it right.
-       // Dynamic import? No.
-       // I will use window.confirm?
        if (!confirm('Virar dono desta empresa para testes?')) return
-       
-       // I need to export/import claimProvider.
-       // Since I cannot allow multiple replace calls easily without messing up lines,
-       // I will trust that I can add the import at the top later.
        const { claimProvider } = await import('../../services/providers.service')
        await claimProvider(provider.id)
        alert('Você agora é o dono! Acesse /provider para ver as mensagens.')
@@ -106,6 +98,8 @@ export function ProviderCard({ provider, selected, onToggle, customMessage, chat
        alert(`Erro ao virar dono: ${err.message || 'Erro desconhecido'}`)
      }
   }
+  */
+
 
   // Styles based on status
   const statusStyles = {
@@ -169,18 +163,20 @@ export function ProviderCard({ provider, selected, onToggle, customMessage, chat
                   >
                     <Check className="h-3 w-3" />
                     Whatsapp
-                    Whatsapp
                   </button>
                  )}
 
-                 {/* Dev: Test Claim */}
+                 {/* Dev: Test Claim (DESATIVADO - COMENTE PARA TESTAR)
                  <button
-                   onClick={handleClaim}
+                   onClick={(e) => {
+                      // handleClaim(e) // Descomente handleClaim acima também
+                   }}
                    className="opacity-0 group-hover:opacity-20 hover:!opacity-100 px-2 py-0.5 text-[8px] bg-purple-100 text-purple-700 rounded border border-purple-200"
                    title="Desenvolvedor: Virar Dono desta Empresa"
                  >
                    Dev: Dono
                  </button>
+                 */}
               </div>
 
               {/* Row 2: Neighborhood and Actions */}

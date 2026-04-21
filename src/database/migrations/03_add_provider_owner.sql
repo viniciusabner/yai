@@ -28,7 +28,10 @@ DROP POLICY IF EXISTS "Users can claim unowned providers" ON public.providers;
 CREATE POLICY "Users can claim unowned providers"
 ON public.providers
 FOR UPDATE
-USING (owner_id IS NULL)
+USING (
+  owner_id IS NULL 
+  AND email = auth.jwt()->>'email'
+)
 WITH CHECK (owner_id = auth.uid());
 
 -- 3. Conversation Policies
