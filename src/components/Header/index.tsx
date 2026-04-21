@@ -21,20 +21,33 @@ export function Header() {
 
   // Listen to Auth State
   useEffect(() => {
+    console.log('[HEADER_DEBUG] Mounting. Checking session...')
     // Check initial user
-    supabase.auth.getUser().then(({ data }) => {
-      setUser(data.user)
-      checkOnboarding(data.user?.id)
-    })
-
-    // Subscribe to changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      console.log('[HEADER_DEBUG] Initial session result:', session ? 'User logged' : 'No session')
       setUser(session?.user ?? null)
       if (session?.user) checkOnboarding(session.user.id)
     })
 
-    return () => subscription.unsubscribe()
+    // Subscribe to changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      console.log('[HEADER_DEBUG] Auth state changed event:', event, { userEmail: session?.user?.email })
+      setUser(session?.user ?? null)
+    })
+
+    return () => {
+      console.log('[HEADER_DEBUG] Unmounting. Unsubscribing...')
+      subscription.unsubscribe()
+    }
   }, [])
+
+  // Trigger onboarding check when user is loaded
+  useEffect(() => {
+    if (user?.id) {
+       console.log('[HEADER_DEBUG] User detected. Triggering checkOnboarding...')
+       checkOnboarding(user.id)
+    }
+  }, [user?.id])
 
   const checkOnboarding = async (userId: string | undefined) => {
       if (!userId) return

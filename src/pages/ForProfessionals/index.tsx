@@ -3,21 +3,35 @@ import { useNavigate } from 'react-router-dom'
 import { Rocket, MessageCircle, DollarSign, CheckCircle2 } from 'lucide-react'
 import { supabase } from '../../services/supabase'
 import { useSelectionStore } from '../../store/useSelectionStore'
+import { getMyProviders } from '../../services/providers.service'
 
 export function ForProfessionals() {
   const navigate = useNavigate()
   const { openProfileModal } = useSelectionStore()
   const [isLogged, setIsLogged] = useState(false)
+  const [isProvider, setIsProvider] = useState(false)
 
   useEffect(() => {
-    supabase.auth.getUser().then(({ data }) => setIsLogged(!!data.user))
+    supabase.auth.getUser().then(({ data }) => {
+      const logged = !!data.user
+      setIsLogged(logged)
+      if (logged) {
+        getMyProviders().then(providers => {
+          setIsProvider(providers.length > 0)
+        })
+      }
+    })
   }, [])
 
   const handleCtaClick = () => {
     if (isLogged) {
-      openProfileModal()
+      if (isProvider) {
+        navigate('/provider')
+      } else {
+        navigate('/register-company')
+      }
     } else {
-      navigate('/register')
+      navigate('/register', { state: { from: '/register-company' } })
     }
   }
 
@@ -39,7 +53,7 @@ export function ForProfessionals() {
             onClick={handleCtaClick}
             className="bg-yellow-400 hover:bg-yellow-300 text-indigo-900 font-bold text-lg py-4 px-10 rounded-2xl shadow-lg transition-transform hover:scale-105 active:scale-95 duration-200"
           >
-            {isLogged ? 'Acessar Meu Perfil de Serviço' : 'Quero Anunciar Grátis'}
+            {isLogged && isProvider ? 'Acessar Meu Painel' : 'Quero Anunciar Grátis'}
           </button>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import { signInWithGoogle, signUpWithEmail } from '../../services/auth.service'
 import { Button } from '../../components/Button'
+import { SuccessModal } from '../../components/SuccessModal'
 
 export function Register() {
   const navigate = useNavigate()
@@ -14,6 +15,7 @@ export function Register() {
   const [whatsapp, setWhatsapp] = useState('') 
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const [showSuccess, setShowSuccess] = useState(false)
 
   const handleGoogleLogin = async () => {
     try {
@@ -44,11 +46,8 @@ export function Register() {
       setLoading(true)
       setError('')
       await signUpWithEmail(email, password, name, whatsapp)
-      // Usually sign up might require confirmation or auto-login. 
-      // Supabase default is "Confirm Email" unless disabled.
-      // Assuming auto-login or message:
-      alert('Cadastro realizado! Se solicitado, verifique seu email.')
-      navigate('/login', { state: location.state })
+      setLoading(false)
+      setShowSuccess(true)
     } catch (err: any) {
       let msg = err.message
       if (msg.includes('Password should be at least 6 characters')) {
@@ -227,6 +226,14 @@ export function Register() {
           </form>
         </div>
       </div>
+      
+      <SuccessModal 
+        isOpen={showSuccess}
+        onClose={() => navigate('/login', { state: location.state })}
+        title="Conta criada!"
+        message="Seu cadastro foi realizado com sucesso. Se solicitado, verifique seu email para confirmar a conta."
+        buttonText="Ir para Login"
+      />
     </div>
   )
 }

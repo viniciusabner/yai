@@ -35,16 +35,22 @@ export function Results() {
   // Auto-send logic after login
   useEffect(() => {
     const autoSend = searchParams.get('autoSend')
+    console.log('[RESULTS_DEBUG] AutoSend effect fired. autoSend param:', autoSend)
+    
     if (autoSend === 'true') {
+      console.log('[RESULTS_DEBUG] autoSend is true,清理 params e enviando...')
       const newSearchParams = new URLSearchParams(searchParams)
       newSearchParams.delete('autoSend')
       setSearchParams(newSearchParams, { replace: true })
       
       if (customMessage.trim().length > 0 && selectedProviders.length > 0) {
+         console.log('[RESULTS_DEBUG] Triggering handleBulkChat')
          handleBulkChat()
+      } else {
+         console.log('[RESULTS_DEBUG] Missing message or providers for autoSend', { messageLen: customMessage.trim().length, providersLen: selectedProviders.length })
       }
     }
-  }, [searchParams, customMessage, selectedProviders])
+  }, [searchParams.toString(), customMessage, selectedProviders])
 
   const [loading, setLoading] = useState(true)
   const [cityNames, setCityNames] = useState<string[]>([])
@@ -71,19 +77,20 @@ export function Results() {
     }
   }
 
-
-
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
 
   useEffect(() => {
+    console.log('[RESULTS_DEBUG] Main data fetch effect fired.', { selectedCities, selectedCategory })
     if (selectedCities.length === 0) {
+      console.log('[RESULTS_DEBUG] No cities selected, navigating Home.')
       navigate('/')
       return
     }
 
     // Load City Names
+    console.log('[RESULTS_DEBUG] Loading city names for:', selectedCities)
     getCities().then(cities => {
       const selectedMap: Record<string, string> = {}
       const names: string[] = []
@@ -97,15 +104,24 @@ export function Results() {
       
       setCityMap(selectedMap)
       setCityNames(names)
-    })
+      console.log('[RESULTS_DEBUG] Cities loaded successfully:', names)
+    }).catch(err => console.error('[RESULTS_DEBUG] Error loading cities:', err))
 
     // Load Providers
+    console.log('[RESULTS_DEBUG] Loading providers...')
     setLoading(true)
     getProvidersByCityIds(selectedCities, selectedCategory)
-      .then(setProviders)
-      .catch((err) => console.error(err))
-      .finally(() => setLoading(false))
-  }, [selectedCities, selectedCategory, navigate])
+      .then(newProviders => {
+        console.log('[RESULTS_DEBUG] Providers loaded:', newProviders.length)
+        setProviders(newProviders)
+      })
+      .catch((err) => console.error('[RESULTS_DEBUG] Error loading providers:', err))
+      .finally(() => {
+        console.log('[RESULTS_DEBUG] Finished loading providers.')
+        setLoading(false)
+      })
+
+  }, [selectedCities.join(','), selectedCategory, navigate])
 
   const handleBulkWhatsApp = () => {
     if (!customMessage.trim()) {
@@ -319,7 +335,7 @@ export function Results() {
           cityMap={cityMap}
           customMessage={customMessage}
           chatSentIds={chatSentIds}
-        onLoginRequest={() => setShowLoginModal(true)}
+          onLoginRequest={() => setShowLoginModal(true)}
           onChatAction={handleOpenChat}
           onProfileClick={handleOpenProfile}
         />

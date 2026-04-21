@@ -10,16 +10,23 @@ export function SelectedCitiesBar() {
   const location = useLocation()
   const isHome = location.pathname === '/'
 
+  console.log('selectedCities111', selectedCities)
+
   useEffect(() => {
-    if (selectedCities.length > 0) {
+    if (selectedCities) {
+      console.log('entrou if')
       getCities().then(cities => {
+        console.log('cities', cities)
         const selected = cities.filter(c => selectedCities.includes(c.id)).map(c => c.name)
         setCityNames(selected)
       })
     } else {
+      console.log('entrou else')
       setCityNames([])
     }
   }, [selectedCities])
+
+
 
   if (location.pathname !== '/' && location.pathname !== '/results') return null
 
